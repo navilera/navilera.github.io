@@ -43,7 +43,7 @@
 
         <nav class='module main-menu color-4'>
         {% for category in site.categories %}
-            <a href='{{ site.url }}/'>{{ category[0] }}</a>
+            <a href='{{ site.url }}/categories/{{ category[0] }}'>{{ category[0] }}</a>
             <br>
         {% endfor %}
         </nav>

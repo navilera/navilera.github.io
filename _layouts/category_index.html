@@ -2,9 +2,12 @@
 layout: default
 ---
 
-<section class='main-content'>
-
-    {% for post in paginator.posts %}
+<div class="main-content">
+<article class="module color-3">
+        <h1>{{ page.category }}</h1>
+        <hr>
+    {% for post in site.posts %}
+		{% if post.categories contains page.category %}
         <article class='module color-3'>
             <header>
                 <span class='categories'>{{post.date}} {{ post.categories | array_to_sentence_string }}</span>
@@ -21,22 +24,6 @@ layout: default
             <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>
                 
         </article>
+		{% endif %}
     {% endfor %}
-
-    <div class='module pagination color-3'>
-        {% if paginator.previous_page %}
-            <a href='{{ site.url }}{{ paginator.previous_page_path }}' class='previous'>Previous</a>
-        {% endif %}
-
-        <span class='page_number'>
-            &mdash; {{ paginator.page }} of {{ paginator.total_pages }} &mdash;
-        </span>
-
-        {% if paginator.next_page %}
-            <a href='{{ site.url }}{{ paginator.next_page_path }}' class='next'>Next</a>
-        {% endif %}
-    </div>
-
-</section>
-
-
+</article>

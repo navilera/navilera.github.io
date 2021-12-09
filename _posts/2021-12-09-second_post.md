@@ -2,7 +2,7 @@
 layout: post
 title:  "두 번째 포스팅"
 categories: 생각
-tags: 
+date: 2021-12-09 07:30 -0800
 ---
 
 두 번째 포스팅.

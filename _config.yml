@@ -24,7 +24,7 @@ kramdown:
 #------------------------------------------------------------------------------
 paginate: 82
 paginate_path: /page-:num
-permalink: /:title
+permalink: /:categories/:year-:month-:day-:title
 
 #------------------------------------------------------------------------------
 # Social sharing, comments and RSS.
