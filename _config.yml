@@ -29,12 +29,9 @@ permalink: /:title
 #------------------------------------------------------------------------------
 # Social sharing, comments and RSS.
 #------------------------------------------------------------------------------
-disqus-id: yourusername
-
 enable-share: true
-twitter: yourusername
-github: yourusername
-google: +yourusername
+github: navilera
+
 
 rss-feed-limit: 10
 rss-show-full: false
