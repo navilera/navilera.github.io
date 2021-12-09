@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Navilera</title>
+        <description>Manwoo Yi</description>
+        <link>https://navilera.com</link>
+        <atom:link href="https://navilera.com/feed.xml" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>두 번째 포스팅</title>
+                <dc:creator></dc:creator>
+                
+                    <description>두 번째 포스팅.
+곧 수정함.
+</description>
+                
+                            <pubDate>Wed, 08 Dec 2021 20:45:00 -0800</pubDate>
+                <link>https://navilera.com/%EC%83%9D%EA%B0%81/2021-12-08-second_post</link>
+                <guid isPermaLink="true">https://navilera.com/%EC%83%9D%EA%B0%81/2021-12-08-second_post</guid>
+            </item>
+        
+            <item>
+                <title>첫 포스팅</title>
+                <dc:creator></dc:creator>
+                
+                    <description>첫 포스팅.
+</description>
+                
+                            <pubDate>Wed, 08 Dec 2021 19:17:00 -0800</pubDate>
+                <link>https://navilera.com/%EC%9D%BC%EB%B0%98/2021-12-08-first_post</link>
+                <guid isPermaLink="true">https://navilera.com/%EC%9D%BC%EB%B0%98/2021-12-08-first_post</guid>
+            </item>
+        
+    </channel>
+</rss>
