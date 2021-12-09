@@ -42,9 +42,10 @@
         </div>
 
         <nav class='module main-menu color-4'>
-            <a href='{{ site.url }}/'>카테고리</a>
+        {% for category in site.categories %}
+            <a href='{{ site.url }}/'>{{ category[0] }}</a>
             <br>
-            <a href='{{ site.url }}/'>카테고리</a>
+        {% endfor %}
         </nav>
 
     </header>
