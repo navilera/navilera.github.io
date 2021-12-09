@@ -10,7 +10,7 @@ layout: default
 		{% if post.categories contains page.category %}
         <article class='module color-3'>
             <header>
-                <span class='categories'>{{post.date | date: "%Y-%m-%d" }} {{ post.categories | array_to_sentence_string }}</span>
+                <span class='categories'>{{post.date | date: "%F %R" }} {{ post.categories | array_to_sentence_string }}</span>
                 
                 <h2>
                     <a href='{{ fullUrl }}{{ post.url }}' title='{{ post.title }}'>
