@@ -5,3 +5,6 @@ all:
 	rm -fr *
 	mv ../temp_site/* .
 	rmdir ../temp_site
+
+run:
+	jekyll serve
