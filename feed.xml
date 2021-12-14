@@ -7,6 +7,18 @@
         <atom:link href="https://navilera.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>318Na 세벌식 자판</title>
+                <dc:creator></dc:creator>
+                
+                    <description>프로젝트 URL: https://github.com/navilera/318Na_HangulKeyboard
+</description>
+                
+                            <pubDate>Mon, 13 Dec 2021 17:18:00 -0800</pubDate>
+                <link>https://navilera.com/%EC%84%B8%EB%B2%8C%EC%8B%9D/2021-12-13-318Na-sebul</link>
+                <guid isPermaLink="true">https://navilera.com/%EC%84%B8%EB%B2%8C%EC%8B%9D/2021-12-13-318Na-sebul</guid>
+            </item>
+        
+            <item>
                 <title>Github page 블로그 설정, 카테고리 삽질</title>
                 <dc:creator></dc:creator>
                 
