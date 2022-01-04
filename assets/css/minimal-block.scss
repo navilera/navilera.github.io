@@ -551,7 +551,7 @@ div.awesomplete {
 
     .main-header,
     .main-content {
-        padding: 0.75em;
+        padding: 0;
         width: 100%;
 
         .title { margin-top: 0 !important; }
@@ -568,4 +568,9 @@ div.awesomplete {
     .social li { display: block; width: 100%; }
 
     pre, code { font-size: 1em !important; }
+
+    article {
+        padding: 5px !important;
+        margin: 0px !important;
+    }
 }
