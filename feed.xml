@@ -7,6 +7,18 @@
         <atom:link href="https://navilera.com/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>318Na 자판 빈도 분석</title>
+                <dc:creator></dc:creator>
+                
+                    <description>나는 내가 만든 한글 자판을 사용하고 있다.
+</description>
+                
+                            <pubDate>Wed, 05 Jan 2022 17:31:00 -0800</pubDate>
+                <link>https://navilera.com/%EC%84%B8%EB%B2%8C%EC%8B%9D/2022-01-05-318Na-analyzer</link>
+                <guid isPermaLink="true">https://navilera.com/%EC%84%B8%EB%B2%8C%EC%8B%9D/2022-01-05-318Na-analyzer</guid>
+            </item>
+        
+            <item>
                 <title>318Na 세벌식 자판</title>
                 <dc:creator></dc:creator>
                 

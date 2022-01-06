@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>
+        
+            318Na 자판 빈도 분석
+        
+    </title>
+
+    <meta name='robots' content='index,follow'>
+    <meta name='revisit-after' content='1 days'>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='HandheldFriendly' content='True'>
+    <meta name='MobileOptimized' content='320'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta http-equiv='cleartype' content='on'>
+
+    
+        <link rel='stylesheet' href='https://navilera.com/assets/css/syntax.css' type='text/css'>
+    
+    
+    <link rel='stylesheet' href='https://navilera.com/assets/css/minimal-block.css' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel='alternate' type='application/rss+xml' title='Navilera' href='https://navilera.com/feed.xml'>
+
+</head>
+
+<body>
+    <header id='top' class='main-header'>
+
+        <div class='module title color-1'>
+            <h1><a href='https://navilera.com/'>Navilera</a></h1>
+        </div>
+
+        <div class='module description color-2'>
+            <a href='https://navilera.com/about/'>Manwoo Yi</a>
+        </div>
+
+        <nav class='module main-menu color-4'>
+        
+            <a href='https://navilera.com/categories/컴퓨터'>컴퓨터</a>
+            <br>
+        
+            <a href='https://navilera.com/categories/세벌식'>세벌식</a>
+            <br>
+        
+        </nav>
+
+    </header>
+
+    <div id='top' class="main-content">
+   
+    <article class="module color-3">
+       
+        <h1>318Na 자판 빈도 분석</h1>
+		<span class='categories'>2022-01-05 17:31 세벌식</span>		
+        <div class='separator'></div>
+        
+
+        <p>나는 내가 만든 한글 자판을 사용하고 있다.</p>
+
+<p><a href="https://kldp.org/node/160815">https://kldp.org/node/160815</a></p>
+
+<p><a href="https://github.com/navilera/318Na_HangulKeyboard">https://github.com/navilera/318Na_HangulKeyboard</a></p>
+
+<p>나름 고민해서 만든 것이고 나는 스스로 318Na 자판이 더 편해서 잘 쓰고 있긴하지만 이것이 실제로 내가 설정한 목표를 달성하고 있는지 궁금했다.</p>
+
+<p><img alt="두벌식자판빈도" src="/assets/images/2022/f29638639420834d7226fa7392777e0b09e560d4441516f32790461667cfa86d.png" width="80%" /></p>
+
+<p>인터넷에서 검색해 보면 여러 자판의 효율을 분석한 자료를 찾을 수 있다. 그 중 위와 같은 그림을 볼 수 있다. 위 그림은 한글 두벌식 국가 표준 자판을 분석한 그림이다.</p>
+
+<p>한글 자판에 관심있는 사람들이라면 누구나 알다시피 한글 두벌식 표준 자판은 왼손에 피로감이 몰리는 단점이 있다. 위 그림에서도 보면 D 키가 빨강이다. D키는 왼손 중지로 타이핑한다. 그리고 S와 R도 만만치 않게 색이 진하다. S는 왼손 약지로 타이핑한다. R은 왼손 검지로 타이핑한다. 검지까지야 그렇다 쳐도 약지에 많은 부담이 생기는 것은 손가락 전체 피로도를 높인다.</p>
+
+<p><img alt="세벌식자판빈도" src="/assets/images/2022/6ec952996ceb86029a7f6bdf1fbaa868e47bd3751f7b76bc2fa9e36db73928a2.png" width="80%" /></p>
+
+<p>위 그림은 세벌식 자판 자판에 대한 효율 분석 자료다. 확실히 왼손과 오른손 검지로 타이핑하는 F와 J키가 사용량이 높다. 참으로 아름답다.</p>
+
+<p>아름답긴 하지만 대부분 사용자들이 표준 두벌식으로 한글 자판을 처음 배우고 익혀서 쓰고 있기 때문에 뒤늦게 세벌식을 연습해서 익히기가 어렵다. 나도 도전해 봤으나 쉽지 않았다. 그래서 포기하고 318Na를 만들었다.</p>
+
+<h2 id="318na는-어떨까">318Na는 어떨까?</h2>
+
+<p>그래서 318Na도 위와 같은 그림을 만들어보고 싶었다. 318Na는 기존 한글 표준 두벌식 사용자들이 빠르게 익히는 것이 첫번째 목표였기 때문에 기본적으로 초성과 중성은 표준 두벌식과 동일하다. 따라서 위의 세벌식 자판처럼 아름다운 빈도 배분은 태생적으로 불가능하다.</p>
+
+<p>표준 두벌식 자판에서 왼손에 타이핑이 집중되는 이유는 종성 자음을 왼손으로 타이핑하기 때문이다. 318Na는 이 종성 자음을 오른손으로 옮겼기 때문에 분명 왼손에 집중된 타이핑 빈도를 낮출 것이다. 그리고 웬만해서는 오른손 검지로 사용 빈도가 높은 글자를 치도록 의도했기 때문에 내 의도가 제대로 구현되었다면 오른손 검지로 타이핑하는 글자에 진한 색이 물들어야 할 것이다.</p>
+
+<p>진짜 이렇게 되는지 궁금했다.</p>
+
+<p>우선 위 그림을 어떻게 만드는지 찾아 봤다. 여러 자료에서 동일한 형태의 그림을 만들어 내는 것으로 보아 위와 비슷한 그림을 만들어 주는 툴이 있거나 사이트가 있는 것으로 추측했다. 의외로 구글링 몇번에 바로 찾았다.</p>
+
+<p><a href="http://patorjk.com/keyboard-layout-analyzer/#/main">자판분석사이트</a></p>
+
+<p>문제는 이 사이트가 한글 오토마타 이런걸 어떤 형태로 입력 받아 자판을 분석하는 것이 아니라 그냥 쌩 영어 알파벳을 입력으로 해서 빈도를 계산하는 형태였던 것이다. 확실치는 않은데 그런것으로 보였다. 그래서 더 고민 안하고 그냥 한글 입력을 영문 QERTY 자판에 맞춰서 변환하는 프로그램을 만들기로 했다.</p>
+
+<h2 id="한글-유니코드-기본">한글 유니코드 기본</h2>
+
+<p>아시다시피 유니코드에는 현대 한글로 조합 가능한 11172자가 모두 들어가 있다. 그것도 자모로 정렬된 순서대로. 따라서 어떤 글자를 알면 해당 글자의 유니코드 코드값을 계산할 수 있다.</p>
+
+<p>우선 초성은 아래 순서로 정렬되서 들어가 있다.</p>
+
+<p>“ㄱ”, “ㄲ”, “ㄴ”, “ㄷ”, “ㄸ”, “ㄹ”, “ㅁ”, “ㅂ”, “ㅃ”, “ㅅ”, “ㅆ”, “ㅇ”, “ㅈ”, “ㅉ”, “ㅊ”, “ㅋ”, “ㅌ”, “ㅍ”, “ㅎ”</p>
+
+<p>그리고 중성.</p>
+
+<p>“ㅏ”, “ㅐ”, “ㅑ”, “ㅒ”, “ㅓ”, “ㅔ”, “ㅕ”, “ㅖ”, “ㅗ”, “ㅘ”, “ㅙ”, “ㅚ”, “ㅛ”, “ㅜ”, “ㅝ”, “ㅞ”, “ㅟ”, “ㅠ”, “ㅡ”, “ㅢ”, “ㅣ”</p>
+
+<p>마지막으로 종성.</p>
+
+<p>””, “ㄱ”, “ㄲ”, “ㄳ”, “ㄴ”, “ㄵ”, “ㄶ”, “ㄷ”, “ㄹ”, “ㄺ”, “ㄻ”, “ㄼ”, “ㄽ”, “ㄾ”, “ㄿ”, “ㅀ”, “ㅁ”, “ㅂ”, “ㅄ”, “ㅅ”, “ㅆ”, “ㅇ”, “ㅈ”, “ㅊ”, “ㅋ”, “ㅌ”, “ㅍ”, “ㅎ”</p>
+
+<p>받침이 없는 글자가 있기 때문에 종성의 처음은 그냥 비어 있는 글자다.</p>
+
+<p>세어보면,</p>
+
+<p>초성 : 19
+중성 : 21
+종성 : 28</p>
+
+<p>이다. 계산해보면 19 * 21* 28  = 11172 요렇게 나온다.</p>
+
+<p>초성 한 개당 조합가능한 글자는 21 * 28 = 588이다. 즉, “ㄱ”을 초성으로 가지는 글자는 모두 588개라는 거다. 마찬가지로 “ㄲ”을 초성으로 가지는 글자도 588개고, “ㄴ”을 초성으로 가지는 글자도 588개다. 각 초성 당 글자가 588개라는 거다. 마찬가지로 중성 “ㅏ”가 나오고 다음번 “ㅏ”가 또 나오는 (받침은 달라지고) 것은 28개 글자마다이다.</p>
+
+<p>유니코드에서 한글 코드가 시작하는 오프셋은 0xAC00이다. 그러므로 어떤 글자에 대한 한글 유니코드 코드값은</p>
+
+<blockquote>
+  <p>((초성인덱스 * 588) + (중성인덱스 * 28) + 종성인덱스) + 0xAC00</p>
+</blockquote>
+
+<p>요렇게 된다. 예를 들어보면, “한”의 초성 “ㅎ”의 인덱스는 18이다. 중성 “ㅏ”의 인덱스는 0이고 종성 “ㄴ”의 인덱스는 4다. 따라서</p>
+
+<blockquote>
+  <p>18 * 588 + 0 * 28 + 4 + 0xAC00 = 0xD55C</p>
+</blockquote>
+
+<p>가 된다.</p>
+
+<p><img alt="코드테이블에서 &quot;한&quot;" src="/assets/images/2022/d2636b66a7e7497cc9412fb9acf51c958629394f3173e59e3ee63100408be690.png" width="25%" /></p>
+
+<p>코드 테이블에서 0xD55C를 찾아보면 ‘한’이 나온다.</p>
+
+<p>여기까지는 글자를 알 때 유니코드를 계산하는 방법이다. 그러나 내가 필요한 것은 유니코드를 알 때 한글 초중종성을 어떤걸 조합했는지 역산하는 것이다.</p>
+
+<p>사실 산수에 가까운 계산이긴 하다.</p>
+
+<blockquote>
+  <p>((초성인덱스 * 588) + (중성인덱스 * 28) + 종성인덱스) + 0xAC00</p>
+</blockquote>
+
+<p>위 공식에서 초성인덱스, 중성인덱스, 종성인덱스를 뽑아내면 된다. 방금 계산한 0xD55C를 이용하겠다. 그러면 “ㅎ”, “ㅏ”, “ㄴ”이 나와야 한다. 정확히는 18, 0, 4가 나와야 한다.</p>
+
+<p>먼저 0xAC00을 뺀다.</p>
+
+<blockquote>
+  <p>0xD55C - 0xAC00 = 10588</p>
+</blockquote>
+
+<p>16진수, 10진수를 막 섞어 쓰고 있긴한데 내가 개발자라 섞어 쓰는게 편하다.</p>
+
+<p>그러면</p>
+
+<blockquote>
+  <p>((초성인덱스 * 588) + (중성인덱스 * 28) + 종성인덱스) = 10588</p>
+</blockquote>
+
+<p>위 식만 남는다. 백투더 국민… 아니 초등학교. 위 식은 쉽게 말해 588로 나눈 몫과 나머지로 생각할 수 있다. 초성인덱스가 몫이고 (중성인덱스 * 28) + 종성인덱스)가 나머지다.</p>
+
+<blockquote>
+  <p>10588 / 588 = 18</p>
+</blockquote>
+
+<p>초성인덱스 18을 구했다.</p>
+
+<p>그러면</p>
+
+<blockquote>
+  <p>(중성인덱스 * 28) + 종성인덱스) = 10588 - (18 * 588) = 4</p>
+</blockquote>
+
+<p>종성 인덱스도 마찬가지로 28로 나눈 나머지와 몫이다. 4를 28로 나누면 몫이 0이고 나머지가 4다. 따라서 18, 0, 4라는 초중종성 인덱스를 모두 구할 수 있다. 이것을 코드로 다시 쓰면 아래와 같다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="n">ucs2code</span> <span class="o">-=</span> <span class="mh">0xAC00</span><span class="p">;</span> <span class="c1">// Hangul Unicode starts at 0xAC00</span>
+	<span class="kt">uint32_t</span> <span class="n">cho_idx</span> <span class="o">=</span> <span class="n">ucs2code</span> <span class="o">/</span> <span class="mi">588</span><span class="p">;</span>
+	<span class="kt">uint32_t</span> <span class="n">joong_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ucs2code</span> <span class="o">-</span> <span class="p">(</span><span class="mi">588</span> <span class="o">*</span> <span class="n">cho_idx</span><span class="p">))</span> <span class="o">/</span> <span class="mi">28</span><span class="p">;</span>
+	<span class="kt">uint32_t</span> <span class="n">jong_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ucs2code</span> <span class="o">-</span> <span class="p">(</span><span class="mi">588</span> <span class="o">*</span> <span class="n">cho_idx</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="n">joong_idx</span> <span class="o">*</span> <span class="mi">28</span><span class="p">);</span></code></pre></figure>
+
+<p>간단하다.</p>
+
+<h2 id="utf-8-ucs-2">UTF-8? UCS-2?</h2>
+
+<p>유니코드를 인코딩하는 여러 인코딩 중에 제일 유명하고 널리 쓰이는 인코딩은 UTF-8이다. ASCII 문자는 변환없이 그대로 쓸 수 있기 때문에 그런것 같은데, 사실 유니코드는 유니코드 그대로 인코딩해서 쓰는것이 맞지 않나라는 생각이 든다. ASCII 코드 쓰는 놈들이 바꾸면 될 일인것을…</p>
+
+<p>아무튼 UTF-8 인코딩은 유니코드를 아래와 같은 규칙으로 인코딩한다.</p>
+
+<p><img alt="UTF-8인코딩" src="/assets/images/2022/1f7379c2bbbb0220da22ae41ff40446e0c98e2c112059a7996c3a111975182a1.png" width="80%" /></p>
+
+<p>뭔가 복잡하다. 그래서 다른 인코딩이 있는지 봤더니 UCS-2라는 인코딩이 있다고 한다. UCS-2는 유니코드 16비트 코드값을 그대로 인코딩 값으로 쓰는 것이라고 한다. 오케이! 이거야.</p>
+
+<p>그래서 전략은 이러하다.</p>
+
+<ol>
+  <li>적절한 한글 문서를 UCS-2로 저장한다.</li>
+  <li>1번에서 저장한 파일을 바이너리로 2바이트씩 읽는다. (유니코드 그대로일 것이다.)</li>
+  <li>2번에서 읽은 16비트를 앞 절에서 설명한 공식으로 나누고 나머지를 구해서 초중종성 인덱스를 구한다.</li>
+  <li>해당 초중종성을 타이핑하는 QERTY 기준 알파벳으로 변환한다.</li>
+  <li>알파벳을 파일에 저장한다.</li>
+</ol>
+
+<p>코드는 이러하다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="cp">#include &lt;stdio.h&gt;
+</span>	<span class="cp">#include &lt;stdint.h&gt;
+</span>	
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cho</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"ㄱ"</span><span class="p">,</span> <span class="s">"ㄲ"</span><span class="p">,</span> <span class="s">"ㄴ"</span><span class="p">,</span> <span class="s">"ㄷ"</span><span class="p">,</span> <span class="s">"ㄸ"</span><span class="p">,</span> <span class="s">"ㄹ"</span><span class="p">,</span> <span class="s">"ㅁ"</span><span class="p">,</span> <span class="s">"ㅂ"</span><span class="p">,</span> <span class="s">"ㅃ"</span><span class="p">,</span> <span class="s">"ㅅ"</span><span class="p">,</span> <span class="s">"ㅆ"</span><span class="p">,</span> <span class="s">"ㅇ"</span><span class="p">,</span> <span class="s">"ㅈ"</span><span class="p">,</span> <span class="s">"ㅉ"</span><span class="p">,</span> <span class="s">"ㅊ"</span><span class="p">,</span> <span class="s">"ㅋ"</span><span class="p">,</span> <span class="s">"ㅌ"</span><span class="p">,</span> <span class="s">"ㅍ"</span><span class="p">,</span> <span class="s">"ㅎ"</span> <span class="p">};</span>
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">joong</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">"ㅏ"</span><span class="p">,</span> <span class="s">"ㅐ"</span><span class="p">,</span> <span class="s">"ㅑ"</span><span class="p">,</span> <span class="s">"ㅒ"</span><span class="p">,</span> <span class="s">"ㅓ"</span><span class="p">,</span> <span class="s">"ㅔ"</span><span class="p">,</span> <span class="s">"ㅕ"</span><span class="p">,</span> <span class="s">"ㅖ"</span><span class="p">,</span> <span class="s">"ㅗ"</span><span class="p">,</span> <span class="s">"ㅘ"</span><span class="p">,</span> <span class="s">"ㅙ"</span><span class="p">,</span> <span class="s">"ㅚ"</span><span class="p">,</span> <span class="s">"ㅛ"</span><span class="p">,</span> <span class="s">"ㅜ"</span><span class="p">,</span> <span class="s">"ㅝ"</span><span class="p">,</span> <span class="s">"ㅞ"</span><span class="p">,</span> <span class="s">"ㅟ"</span><span class="p">,</span> <span class="s">"ㅠ"</span><span class="p">,</span> <span class="s">"ㅡ"</span><span class="p">,</span> <span class="s">"ㅢ"</span><span class="p">,</span> <span class="s">"ㅣ"</span> <span class="p">};</span>
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">jong</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">""</span><span class="p">,</span> <span class="s">"ㄱ"</span><span class="p">,</span> <span class="s">"ㄲ"</span><span class="p">,</span> <span class="s">"ㄳ"</span><span class="p">,</span> <span class="s">"ㄴ"</span><span class="p">,</span> <span class="s">"ㄵ"</span><span class="p">,</span> <span class="s">"ㄶ"</span><span class="p">,</span> <span class="s">"ㄷ"</span><span class="p">,</span> <span class="s">"ㄹ"</span><span class="p">,</span> <span class="s">"ㄺ"</span><span class="p">,</span> <span class="s">"ㄻ"</span><span class="p">,</span> <span class="s">"ㄼ"</span><span class="p">,</span> <span class="s">"ㄽ"</span><span class="p">,</span> <span class="s">"ㄾ"</span><span class="p">,</span> <span class="s">"ㄿ"</span><span class="p">,</span> <span class="s">"ㅀ"</span><span class="p">,</span> <span class="s">"ㅁ"</span><span class="p">,</span> <span class="s">"ㅂ"</span><span class="p">,</span> <span class="s">"ㅄ"</span><span class="p">,</span> <span class="s">"ㅅ"</span><span class="p">,</span> <span class="s">"ㅆ"</span><span class="p">,</span> <span class="s">"ㅇ"</span><span class="p">,</span> <span class="s">"ㅈ"</span><span class="p">,</span> <span class="s">"ㅊ"</span><span class="p">,</span> <span class="s">"ㅋ"</span><span class="p">,</span> <span class="s">"ㅌ"</span><span class="p">,</span> <span class="s">"ㅍ"</span><span class="p">,</span> <span class="s">"ㅎ"</span> <span class="p">};</span>
+	
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cho_eng</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"r"</span><span class="p">,</span>  <span class="s">"rr"</span><span class="p">,</span> <span class="s">"s"</span><span class="p">,</span>  <span class="s">"e"</span><span class="p">,</span>  <span class="s">"ee"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span>  <span class="s">"a"</span><span class="p">,</span>  <span class="s">"q"</span><span class="p">,</span>  <span class="s">"qq"</span><span class="p">,</span> <span class="s">"t"</span><span class="p">,</span>  <span class="s">"tt"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span>  <span class="s">"w"</span><span class="p">,</span>  <span class="s">"ww"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span>  <span class="s">"z"</span><span class="p">,</span>  <span class="s">"x"</span><span class="p">,</span>  <span class="s">"v"</span><span class="p">,</span>  <span class="s">"g"</span><span class="p">};</span> 
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">joong_eng</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">"k"</span><span class="p">,</span>  <span class="s">"o"</span><span class="p">,</span>  <span class="s">"i"</span><span class="p">,</span>  <span class="s">"oo"</span><span class="p">,</span> <span class="s">"j"</span><span class="p">,</span>  <span class="s">"p"</span><span class="p">,</span>  <span class="s">"u"</span><span class="p">,</span>  <span class="s">"pp"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span>  <span class="s">"hk"</span><span class="p">,</span> <span class="s">"ho"</span><span class="p">,</span> <span class="s">"hl"</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span>  <span class="s">"n"</span><span class="p">,</span>  <span class="s">"nj"</span><span class="p">,</span> <span class="s">"np"</span><span class="p">,</span> <span class="s">"nl"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span>  <span class="s">"m"</span><span class="p">,</span>  <span class="s">"ml"</span><span class="p">,</span> <span class="s">"l"</span> <span class="p">};</span> 
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">jong_eng</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">""</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span>  <span class="s">"yy"</span><span class="p">,</span> <span class="s">"yu"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span>  <span class="s">"h;"</span><span class="p">,</span> <span class="s">"H"</span><span class="p">,</span>  <span class="s">"mm"</span><span class="p">,</span> <span class="s">"n"</span><span class="p">,</span>  <span class="s">"K"</span><span class="p">,</span>  <span class="s">"M"</span><span class="p">,</span>  <span class="s">"B"</span><span class="p">,</span>  <span class="s">"nu"</span><span class="p">,</span> <span class="s">"nh"</span><span class="p">,</span> <span class="s">"nb"</span><span class="p">,</span> <span class="s">"I"</span><span class="p">,</span>  <span class="s">"m"</span><span class="p">,</span>  <span class="s">"b"</span><span class="p">,</span>  <span class="s">"J"</span><span class="p">,</span>  <span class="s">"u"</span><span class="p">,</span>  <span class="s">"uu"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span>  <span class="s">";"</span><span class="p">,</span>  <span class="s">";;"</span><span class="p">,</span> <span class="s">"nn"</span><span class="p">,</span> <span class="s">"hh"</span><span class="p">,</span> <span class="s">"bb"</span><span class="p">,</span> <span class="s">"ii"</span> <span class="p">};</span>
+	
+	
+	<span class="cp">#define CHO_NUM     19
+</span>	<span class="cp">#define JOONG_NUM   21
+</span>	<span class="cp">#define JONG_NUM    28
+</span>	
+	<span class="cp">#define START_HAN   0xAC00
+</span>	<span class="cp">#define END_HAN     0xD7AF
+</span>	
+	<span class="kt">void</span> <span class="nf">w_file</span><span class="p">(</span><span class="kt">FILE</span> <span class="o">*</span><span class="n">efp</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span>
+	<span class="p">{</span>
+	    <span class="kt">char</span> <span class="o">*</span><span class="n">ch</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span>
+	    <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">ch</span><span class="p">)</span>
+	    <span class="p">{</span>
+	        <span class="n">fwrite</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">efp</span><span class="p">);</span>
+	        <span class="n">ch</span><span class="o">++</span><span class="p">;</span>
+	    <span class="p">}</span>
+	<span class="p">}</span>
+	
+	<span class="kt">void</span> <span class="nf">dis_assemble</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">ucs2code</span><span class="p">,</span> <span class="kt">FILE</span> <span class="o">*</span><span class="n">efp</span><span class="p">)</span>
+	<span class="p">{</span>
+	    <span class="c1">// 값 = ((초성 * 588) + (중성 * 28) + 종성) + 0xAC00;</span>
+	
+	    <span class="n">ucs2code</span> <span class="o">-=</span> <span class="mh">0xAC00</span><span class="p">;</span> <span class="c1">// Hangul Unicode starts at 0xAC00</span>
+	    <span class="kt">uint32_t</span> <span class="n">cho_idx</span> <span class="o">=</span> <span class="n">ucs2code</span> <span class="o">/</span> <span class="mi">588</span><span class="p">;</span>
+	    <span class="kt">uint32_t</span> <span class="n">joong_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ucs2code</span> <span class="o">-</span> <span class="p">(</span><span class="mi">588</span> <span class="o">*</span> <span class="n">cho_idx</span><span class="p">))</span> <span class="o">/</span> <span class="mi">28</span><span class="p">;</span>
+	    <span class="kt">uint32_t</span> <span class="n">jong_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ucs2code</span> <span class="o">-</span> <span class="p">(</span><span class="mi">588</span> <span class="o">*</span> <span class="n">cho_idx</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="n">joong_idx</span> <span class="o">*</span> <span class="mi">28</span><span class="p">);</span>
+	
+	    <span class="n">printf</span><span class="p">(</span><span class="s">"-&gt; %s + %s + %s:"</span><span class="p">,</span> <span class="n">cho</span><span class="p">[</span><span class="n">cho_idx</span><span class="p">],</span> <span class="n">joong</span><span class="p">[</span><span class="n">joong_idx</span><span class="p">],</span> <span class="n">jong</span><span class="p">[</span><span class="n">jong_idx</span><span class="p">]);</span>
+	    <span class="n">printf</span><span class="p">(</span><span class="s">" %s + %s + %s"</span><span class="p">,</span> <span class="n">cho_eng</span><span class="p">[</span><span class="n">cho_idx</span><span class="p">],</span> <span class="n">joong_eng</span><span class="p">[</span><span class="n">joong_idx</span><span class="p">],</span> <span class="n">jong_eng</span><span class="p">[</span><span class="n">jong_idx</span><span class="p">]);</span>
+	
+	    <span class="k">if</span> <span class="p">(</span><span class="n">efp</span><span class="p">)</span>
+	    <span class="p">{</span>
+	        <span class="n">w_file</span><span class="p">(</span><span class="n">efp</span><span class="p">,</span> <span class="n">cho_eng</span><span class="p">[</span><span class="n">cho_idx</span><span class="p">]);</span>
+	        <span class="n">w_file</span><span class="p">(</span><span class="n">efp</span><span class="p">,</span> <span class="n">joong_eng</span><span class="p">[</span><span class="n">joong_idx</span><span class="p">]);</span>
+	        <span class="n">w_file</span><span class="p">(</span><span class="n">efp</span><span class="p">,</span> <span class="n">jong_eng</span><span class="p">[</span><span class="n">jong_idx</span><span class="p">]);</span>
+	    <span class="p">}</span>
+	<span class="p">}</span>
+	
+	<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+	<span class="p">{</span>	
+	    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"anal_sample.txt"</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">);</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+	    <span class="p">{</span>
+	        <span class="kt">FILE</span> <span class="o">*</span><span class="n">efp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"anal_sample_en.txt"</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">);</span>
+	
+	        <span class="kt">uint16_t</span> <span class="n">ucs2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	        <span class="k">while</span> <span class="p">(</span><span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ucs2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">))</span>
+	        <span class="p">{</span>
+	            <span class="n">printf</span><span class="p">(</span><span class="s">"0x%04x "</span><span class="p">,</span> <span class="n">ucs2</span><span class="p">);</span>
+	            <span class="k">if</span><span class="p">(</span><span class="n">START_HAN</span> <span class="o">&lt;=</span> <span class="n">ucs2</span> <span class="o">&amp;&amp;</span> <span class="n">ucs2</span> <span class="o">&lt;=</span> <span class="n">END_HAN</span><span class="p">)</span>
+	            <span class="p">{</span>
+	                <span class="n">dis_assemble</span><span class="p">(</span><span class="n">ucs2</span><span class="p">,</span> <span class="n">efp</span><span class="p">);</span>
+	            <span class="p">}</span>
+	            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	        <span class="p">}</span>
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	        <span class="n">fclose</span><span class="p">(</span><span class="n">efp</span><span class="p">);</span>
+	        <span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+	    <span class="p">}</span>
+	    <span class="k">else</span>
+	    <span class="p">{</span>
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"file open fail</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	    <span class="p">}</span>
+	    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></figure>
+
+<p>매우 기본적인 코드다. 정말 오래간만에 이런 기초 라이브러리만 사용해서 코딩해 본것 같다. 간만에 기분이 좋았다. 이 글을 읽는 사람들 중엔 모르는 사람도 있을테니 코드를 한줄씩 보면 이러하다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+	<span class="p">{</span>	
+	    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"anal_sample.txt"</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">);</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+	    <span class="p">{</span>
+	        <span class="kt">FILE</span> <span class="o">*</span><span class="n">efp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"anal_sample_en.txt"</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">);</span></code></pre></figure>
+
+<p>main() 함수를 시작하자마자 파일을 두 개 연다. “anal_sample.txt”는 분석할 한글 유니코드 UCS-2 인코딩으로 저장된 파일이다. 유니코드를 그대로 읽어서 자모를 분리해야 하므로 “rb” 옵션을 사용해 바이너리 읽기 전용으로 열었다.</p>
+
+<p>그리고 파일을 또 연다. 파일 이름은 “anal_sample_en.txt”다. 원본을 읽어서 자모를 분리한 다음 해당 자모를 입력하려면 QERTY 키보드에 어떤 키를 눌러야 하는지 알파벳으로 변환한다. 변환한 알파벳을 저장하는 파일이다. 그래서 “wb” 옵션을 사용해서 바이너리 쓰기 전용으로 열었다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	        <span class="kt">uint16_t</span> <span class="n">ucs2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	        <span class="k">while</span> <span class="p">(</span><span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ucs2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">))</span>
+	        <span class="p">{</span>
+	            <span class="n">printf</span><span class="p">(</span><span class="s">"0x%04x "</span><span class="p">,</span> <span class="n">ucs2</span><span class="p">);</span>
+	            <span class="k">if</span><span class="p">(</span><span class="n">START_HAN</span> <span class="o">&lt;=</span> <span class="n">ucs2</span> <span class="o">&amp;&amp;</span> <span class="n">ucs2</span> <span class="o">&lt;=</span> <span class="n">END_HAN</span><span class="p">)</span>
+	            <span class="p">{</span>
+	                <span class="n">dis_assemble</span><span class="p">(</span><span class="n">ucs2</span><span class="p">,</span> <span class="n">efp</span><span class="p">);</span>
+	            <span class="p">}</span>
+	            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	        <span class="p">}</span>
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	        <span class="n">fclose</span><span class="p">(</span><span class="n">efp</span><span class="p">);</span>
+	        <span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span></code></pre></figure>
+
+<p>이 코드의 메인 로직이다. 원본 파일에서 데이터를 2바이트씩 읽어서 ucs2 변수에 저장한다. ucs2 변수는 uint16_t 타입이다. 2바이트니까 16비트다. 그러면 UCS-2 인코딩으로 저장한 원본에서 유니코드 한 글자씩 값을 읽을 수 있다. 해당 ucs2 변수의 값이 START_HAN과 END_HAN 사이에 있는지 검사한다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="cp">#define START_HAN   0xAC00
+</span>	<span class="cp">#define END_HAN     0xD7AF</span></code></pre></figure>
+
+<p>앞에서도 언급했듯 유니코드에서 한글은 0xAC00 오프셋부터 시작한다. 그리고 한글은 11172자가 쭉 할당되어 있고 그 다음 몇 개는 다음 문자셋과 정렬을 맞추려고 비어 있다. 그 비어있는 몇 개 중 하나 위치가 0xD7AF다. 따라서 0xAC00과 0xD7AF 사이의 값으로 ucs2 변수의 값이 있다면 그것은 한글이다.</p>
+
+<p>위 코드에서 한글만 따로 걸러내기 때문에 영문자나 숫자, 특수문자 등은 변환하지 않는다. 그래서 분석 대상에 포함하지 않는다. 오로지 한글만 분석하기 위함이다. 한글만 걸러내서 dis_assemble() 함수에 파일 포인터와 함께 전달한다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="kt">void</span> <span class="nf">dis_assemble</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">ucs2code</span><span class="p">,</span> <span class="kt">FILE</span> <span class="o">*</span><span class="n">efp</span><span class="p">)</span>
+	<span class="p">{</span>
+	    <span class="c1">// 값 = ((초성 * 588) + (중성 * 28) + 종성) + 0xAC00;</span>
+	
+	    <span class="n">ucs2code</span> <span class="o">-=</span> <span class="mh">0xAC00</span><span class="p">;</span> <span class="c1">// Hangul Unicode starts at 0xAC00</span>
+	    <span class="kt">uint32_t</span> <span class="n">cho_idx</span> <span class="o">=</span> <span class="n">ucs2code</span> <span class="o">/</span> <span class="mi">588</span><span class="p">;</span>
+	    <span class="kt">uint32_t</span> <span class="n">joong_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ucs2code</span> <span class="o">-</span> <span class="p">(</span><span class="mi">588</span> <span class="o">*</span> <span class="n">cho_idx</span><span class="p">))</span> <span class="o">/</span> <span class="mi">28</span><span class="p">;</span>
+	    <span class="kt">uint32_t</span> <span class="n">jong_idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ucs2code</span> <span class="o">-</span> <span class="p">(</span><span class="mi">588</span> <span class="o">*</span> <span class="n">cho_idx</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="n">joong_idx</span> <span class="o">*</span> <span class="mi">28</span><span class="p">);</span>
+	
+	    <span class="n">printf</span><span class="p">(</span><span class="s">"-&gt; %s + %s + %s:"</span><span class="p">,</span> <span class="n">cho</span><span class="p">[</span><span class="n">cho_idx</span><span class="p">],</span> <span class="n">joong</span><span class="p">[</span><span class="n">joong_idx</span><span class="p">],</span> <span class="n">jong</span><span class="p">[</span><span class="n">jong_idx</span><span class="p">]);</span>
+	    <span class="n">printf</span><span class="p">(</span><span class="s">" %s + %s + %s"</span><span class="p">,</span> <span class="n">cho_eng</span><span class="p">[</span><span class="n">cho_idx</span><span class="p">],</span> <span class="n">joong_eng</span><span class="p">[</span><span class="n">joong_idx</span><span class="p">],</span> <span class="n">jong_eng</span><span class="p">[</span><span class="n">jong_idx</span><span class="p">]);</span>
+	
+	    <span class="k">if</span> <span class="p">(</span><span class="n">efp</span><span class="p">)</span>
+	    <span class="p">{</span>
+	        <span class="n">w_file</span><span class="p">(</span><span class="n">efp</span><span class="p">,</span> <span class="n">cho_eng</span><span class="p">[</span><span class="n">cho_idx</span><span class="p">]);</span>
+	        <span class="n">w_file</span><span class="p">(</span><span class="n">efp</span><span class="p">,</span> <span class="n">joong_eng</span><span class="p">[</span><span class="n">joong_idx</span><span class="p">]);</span>
+	        <span class="n">w_file</span><span class="p">(</span><span class="n">efp</span><span class="p">,</span> <span class="n">jong_eng</span><span class="p">[</span><span class="n">jong_idx</span><span class="p">]);</span>
+	    <span class="p">}</span>
+	<span class="p">}</span></code></pre></figure>
+
+<p>위 코드는 dis_assemble() 함수다. 앞 절에서 설명한 유니코드에서 한글 초중종성 자모를 걸러내는 코드가 나온다. 그리고 확인용으로 화면에 자모를 출력하고 w_file() 함수를 호출해서 파일에 쓴다. 파일에 쓰기전에 어떻게 한글 자모를 QERTY 알파벳으로 변환하는지 보면,</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cho</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"ㄱ"</span><span class="p">,</span> <span class="s">"ㄲ"</span><span class="p">,</span> <span class="s">"ㄴ"</span><span class="p">,</span> <span class="s">"ㄷ"</span><span class="p">,</span> <span class="s">"ㄸ"</span><span class="p">,</span> <span class="s">"ㄹ"</span><span class="p">,</span> <span class="s">"ㅁ"</span><span class="p">,</span> <span class="s">"ㅂ"</span><span class="p">,</span> <span class="s">"ㅃ"</span><span class="p">,</span> <span class="s">"ㅅ"</span><span class="p">,</span> <span class="s">"ㅆ"</span><span class="p">,</span> <span class="s">"ㅇ"</span><span class="p">,</span> <span class="s">"ㅈ"</span><span class="p">,</span> <span class="s">"ㅉ"</span><span class="p">,</span> <span class="s">"ㅊ"</span><span class="p">,</span> <span class="s">"ㅋ"</span><span class="p">,</span> <span class="s">"ㅌ"</span><span class="p">,</span> <span class="s">"ㅍ"</span><span class="p">,</span> <span class="s">"ㅎ"</span> <span class="p">};</span>
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">joong</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">"ㅏ"</span><span class="p">,</span> <span class="s">"ㅐ"</span><span class="p">,</span> <span class="s">"ㅑ"</span><span class="p">,</span> <span class="s">"ㅒ"</span><span class="p">,</span> <span class="s">"ㅓ"</span><span class="p">,</span> <span class="s">"ㅔ"</span><span class="p">,</span> <span class="s">"ㅕ"</span><span class="p">,</span> <span class="s">"ㅖ"</span><span class="p">,</span> <span class="s">"ㅗ"</span><span class="p">,</span> <span class="s">"ㅘ"</span><span class="p">,</span> <span class="s">"ㅙ"</span><span class="p">,</span> <span class="s">"ㅚ"</span><span class="p">,</span> <span class="s">"ㅛ"</span><span class="p">,</span> <span class="s">"ㅜ"</span><span class="p">,</span> <span class="s">"ㅝ"</span><span class="p">,</span> <span class="s">"ㅞ"</span><span class="p">,</span> <span class="s">"ㅟ"</span><span class="p">,</span> <span class="s">"ㅠ"</span><span class="p">,</span> <span class="s">"ㅡ"</span><span class="p">,</span> <span class="s">"ㅢ"</span><span class="p">,</span> <span class="s">"ㅣ"</span> <span class="p">};</span>
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">jong</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">""</span><span class="p">,</span> <span class="s">"ㄱ"</span><span class="p">,</span> <span class="s">"ㄲ"</span><span class="p">,</span> <span class="s">"ㄳ"</span><span class="p">,</span> <span class="s">"ㄴ"</span><span class="p">,</span> <span class="s">"ㄵ"</span><span class="p">,</span> <span class="s">"ㄶ"</span><span class="p">,</span> <span class="s">"ㄷ"</span><span class="p">,</span> <span class="s">"ㄹ"</span><span class="p">,</span> <span class="s">"ㄺ"</span><span class="p">,</span> <span class="s">"ㄻ"</span><span class="p">,</span> <span class="s">"ㄼ"</span><span class="p">,</span> <span class="s">"ㄽ"</span><span class="p">,</span> <span class="s">"ㄾ"</span><span class="p">,</span> <span class="s">"ㄿ"</span><span class="p">,</span> <span class="s">"ㅀ"</span><span class="p">,</span> <span class="s">"ㅁ"</span><span class="p">,</span> <span class="s">"ㅂ"</span><span class="p">,</span> <span class="s">"ㅄ"</span><span class="p">,</span> <span class="s">"ㅅ"</span><span class="p">,</span> <span class="s">"ㅆ"</span><span class="p">,</span> <span class="s">"ㅇ"</span><span class="p">,</span> <span class="s">"ㅈ"</span><span class="p">,</span> <span class="s">"ㅊ"</span><span class="p">,</span> <span class="s">"ㅋ"</span><span class="p">,</span> <span class="s">"ㅌ"</span><span class="p">,</span> <span class="s">"ㅍ"</span><span class="p">,</span> <span class="s">"ㅎ"</span> <span class="p">};</span>
+	
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">cho_eng</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"r"</span><span class="p">,</span>  <span class="s">"rr"</span><span class="p">,</span> <span class="s">"s"</span><span class="p">,</span>  <span class="s">"e"</span><span class="p">,</span>  <span class="s">"ee"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span>  <span class="s">"a"</span><span class="p">,</span>  <span class="s">"q"</span><span class="p">,</span>  <span class="s">"qq"</span><span class="p">,</span> <span class="s">"t"</span><span class="p">,</span>  <span class="s">"tt"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span>  <span class="s">"w"</span><span class="p">,</span>  <span class="s">"ww"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span>  <span class="s">"z"</span><span class="p">,</span>  <span class="s">"x"</span><span class="p">,</span>  <span class="s">"v"</span><span class="p">,</span>  <span class="s">"g"</span><span class="p">};</span> 
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">joong_eng</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">"k"</span><span class="p">,</span>  <span class="s">"o"</span><span class="p">,</span>  <span class="s">"i"</span><span class="p">,</span>  <span class="s">"oo"</span><span class="p">,</span> <span class="s">"j"</span><span class="p">,</span>  <span class="s">"p"</span><span class="p">,</span>  <span class="s">"u"</span><span class="p">,</span>  <span class="s">"pp"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span>  <span class="s">"hk"</span><span class="p">,</span> <span class="s">"ho"</span><span class="p">,</span> <span class="s">"hl"</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span>  <span class="s">"n"</span><span class="p">,</span>  <span class="s">"nj"</span><span class="p">,</span> <span class="s">"np"</span><span class="p">,</span> <span class="s">"nl"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">,</span>  <span class="s">"m"</span><span class="p">,</span>  <span class="s">"ml"</span><span class="p">,</span> <span class="s">"l"</span> <span class="p">};</span> 
+	<span class="k">static</span> <span class="kt">char</span><span class="o">*</span> <span class="n">jong_eng</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="s">""</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span>  <span class="s">"yy"</span><span class="p">,</span> <span class="s">"yu"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span>  <span class="s">"h;"</span><span class="p">,</span> <span class="s">"H"</span><span class="p">,</span>  <span class="s">"mm"</span><span class="p">,</span> <span class="s">"n"</span><span class="p">,</span>  <span class="s">"K"</span><span class="p">,</span>  <span class="s">"M"</span><span class="p">,</span>  <span class="s">"B"</span><span class="p">,</span>  <span class="s">"nu"</span><span class="p">,</span> <span class="s">"nh"</span><span class="p">,</span> <span class="s">"nb"</span><span class="p">,</span> <span class="s">"I"</span><span class="p">,</span>  <span class="s">"m"</span><span class="p">,</span>  <span class="s">"b"</span><span class="p">,</span>  <span class="s">"J"</span><span class="p">,</span>  <span class="s">"u"</span><span class="p">,</span>  <span class="s">"uu"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span>  <span class="s">";"</span><span class="p">,</span>  <span class="s">";;"</span><span class="p">,</span> <span class="s">"nn"</span><span class="p">,</span> <span class="s">"hh"</span><span class="p">,</span> <span class="s">"bb"</span><span class="p">,</span> <span class="s">"ii"</span> <span class="p">};</span></code></pre></figure>
+
+<p>매우 간단하다. dis_assemble() 함수 내부에서 초중종성 자모의 인덱스를 구했다. 그러면 해당 인덱스 위치에 해당 자모를 타이핑하는 알파벳을 대입해 배열을 만들면 된다.</p>
+
+<p>예들 들면, “한” 이라는 글자는 “ㅎ + ㅏ + ㄴ”로 초중중성을 분리하고 인덱스는 18, 0, 4다. 318Na 자판에서 초성 “ㅎ”은 QERTY 자판의 ‘g’를 눌러야 한다. 중성 “ㅏ”는 ‘k’를 눌러야 한다. 종성 “ㄴ”은 ‘h’를 입력한다. 그래서 “한”은 “gkh”을 순서대로 입력하면 된다.</p>
+
+<p>자판 빈도를 분석해주는 사이트에 “gkh”를 입력하면 g를 한 번 누른거고 k를 한 번 누른거고 h를 한 번 누른 것으로 처리한다. 마찬가지로 대문자 B를 입력하면 쉬프트와 b를 누른 것으로 처리한다.</p>
+
+<p>코딩한 코드를 빌드한다. 파일 이름은 convertHan2Eng.c로 저장했고 실행 파일은 간단하게 c로 했다.</p>
+
+<blockquote>
+  <p>gcc -o c convertHan2Eng.c</p>
+</blockquote>
+
+<p>테스트해 본다.</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat &gt; anal_sample.txt
+동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
+무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세
+</code></pre></div>  </div>
+</blockquote>
+
+<p>리눅스 터미널에서 이렇게 cat로 해서 한글을 저장하면 시스템 로케일을 따라간다. 보통 시스템 로케일 기본값은 utf-8인 경우가 많다. 그래서 별도 텍스트 에디터등으로 anal_sample.txt를 UCS-2 형식으로 변환해서 저장해야 한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./c
+0xb3d9 -&gt; ㄷ + ㅗ + ㅇ: e + h + i
+0xd574 -&gt; ㅎ + ㅐ + : g + o + 
+0xbb3c -&gt; ㅁ + ㅜ + ㄹ: a + n + n
+0xacfc -&gt; ㄱ + ㅘ + : r + hk + 
+0x0020 
+0xbc31 -&gt; ㅂ + ㅐ + ㄱ: q + o + y
+0xb450 -&gt; ㄷ + ㅜ + : e + n + 
+0xc0b0 -&gt; ㅅ + ㅏ + ㄴ: t + k + h
+0xc774 -&gt; ㅇ + ㅣ + : d + l + 
+
+... 중략 ...
+
+0x0020 
+0xb300 -&gt; ㄷ + ㅐ + : e + o + 
+0xd55c -&gt; ㅎ + ㅏ + ㄴ: g + k + h
+0x0020 
+0xc0ac -&gt; ㅅ + ㅏ + : t + k + 
+0xb78c -&gt; ㄹ + ㅏ + ㅁ: f + k + m
+0x0020 
+0xb300 -&gt; ㄷ + ㅐ + : e + o + 
+0xd55c -&gt; ㅎ + ㅏ + ㄴ: g + k + h
+0xc73c -&gt; ㅇ + ㅡ + : d + m + 
+0xb85c -&gt; ㄹ + ㅗ + : f + h + 
+0x0020 
+0xae38 -&gt; ㄱ + ㅣ + ㄹ: r + l + n
+0xc774 -&gt; ㅇ + ㅣ + : d + l + 
+0x0020 
+0xbcf4 -&gt; ㅂ + ㅗ + : q + h + 
+0xc804 -&gt; ㅈ + ㅓ + ㄴ: w + j + h
+0xd558 -&gt; ㅎ + ㅏ + : g + k + 
+0xc138 -&gt; ㅅ + ㅔ + : t + p + 
+0x000a 
+</code></pre></div></div>
+
+<p>“동”은 “ehi”이고 “해”는 “go”다. 그렇게 쭉 애국가 1절을 318Na 자판 기준으로 QWERT 자판으로 치면 어떻게 되는지 자동 변환했다.</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat anal_sample_en.txt 
+ehigoannrhkqoyentkhdlakfmrhekIehfhygksmslmdlqhdngktkdnflskfkakhtpanrnighktkmcjhflgh kfurkitkheogkhtkfkmeogkhdmfhrlndlqhwjhgktp
+</code></pre></div>  </div>
+</blockquote>
+
+<p>엔터, 스페이스등 특수 문자를 모두 변환에서 제외했더니 변환 결과는 그냥 아주 긴 한 줄이다. 뭐 어떠랴, 내가 궁금한건 한글이니깐.</p>
+
+<p>어쨌든 됐다. 그러면 이제 분석해 보자.</p>
+
+<h2 id="대한민국-헌법">대한민국 헌법</h2>
+
+<p>법제처 홈페이지에 들어가면 대한민국 헌법 전문을 열람할 수 있다. 이걸 그대로 긁어서 anal_sample.txt에 UCS-2로 저장한다. 그리고 앞절에서 만든 변환을 하면 아주 긴 한 줄짜리 anal_sample_en.txt 파일이 나온다. 이걸 역시 그대로 긁어서 http://patorjk.com/keyboard-layout-analyzer/ 사이트에 붙이고 결과를 본다.</p>
+
+<p>결과는…</p>
+
+<p><img alt="318Na 자판 분석 결과" src="/assets/images/2022/3e2c9ee2b3d7471a06d7c452986421badb9d8c4e1607865a14ef93050c4f087e.png" width="80%" /></p>
+
+<p>이러하다.</p>
+
+<p>앞의 표준 두벌식과 비교해서 왼손의 부담을 확실히 덜어낸 것을 알 수 있다. 이중 모음 중성 조합 때문에 J 키 위치에 종성을 배치하지 못해 오른손 검지로 타이핑 할 수 있는 J 대신 바로 옆에 있는 H에 가장 많은 타이핑이 집중됐다. 이 역시 내가 의도한 대로다.</p>
+
+<p>왼손은 중지로 타이핑하는 D에 집중되어 있으나 이것은 표준 두벌식의 초성 배치를 그대로 쓴 것이기 때문에 내 잘못이 아니다. 표준 두벌식의 특성을 왼손은 그대로 따를 수 밖에 없다.</p>
+
+<p>여기까지 하고 나니 실사용 할 때는 어떤 결과가 나올지 궁금했다. 과연 위 그림과 비슷할지 아닐지.</p>
+
+<h2 id="키로거">키로거</h2>
+
+<p>실사용하면서 어떤 키를 타이핑하는지를 기록하려면 키로거(key logger)를 만들어야 한다. 키로거란 말 그대로 운영체제가 접수하는 모든 키보드 입력을 로깅하는 것이다.</p>
+
+<p>리눅스에서 루트 계정이면 아주 쉽게 키로거를 만들 수 있다. 루트 유저로 리눅스에서 안되는게 뭐가 있겠는가.</p>
+
+<p>리눅스 파일 시스템에서 /dev/input 밑에 보면 ‘event숫자’로 이름 붙은 파일들이 보인다.</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls /dev/input -al
+total 0
+drwxr-xr-x  4 root root     420 Nov 19 22:08 .
+drwxr-xr-x 20 root root    4180 Nov 19 22:09 ..
+drwxr-xr-x  2 root root     100 Nov 19 22:08 by-id
+drwxr-xr-x  2 root root     120 Nov 19 22:08 by-path
+crw-rw----  1 root input 13, 64 Nov 19 22:08 event0
+crw-rw----  1 root input 13, 65 Nov 19 22:08 event1
+crw-rw----  1 root input 13, 74 Nov 19 22:08 event10
+crw-rw----  1 root input 13, 75 Nov 19 22:08 event11
+crw-rw----  1 root input 13, 76 Nov 19 22:08 event12
+crw-rw----  1 root input 13, 77 Nov 19 22:08 event13
+crw-rw----  1 root input 13, 78 Nov 19 22:08 event14
+crw-rw----  1 root input 13, 66 Nov 19 22:08 event2
+crw-rw----  1 root input 13, 67 Nov 19 22:08 event3
+crw-rw----  1 root input 13, 68 Nov 19 22:08 event4
+crw-rw----  1 root input 13, 69 Nov 19 22:08 event5
+crw-rw----  1 root input 13, 70 Nov 19 22:08 event6
+crw-rw----  1 root input 13, 71 Nov 19 22:08 event7
+crw-rw----  1 root input 13, 72 Nov 19 22:08 event8
+crw-rw----  1 root input 13, 73 Nov 19 22:08 event9
+crw-rw----  1 root input 13, 63 Nov 19 22:08 mice
+crw-rw----  1 root input 13, 32 Nov 19 22:08 mouse0
+</code></pre></div>  </div>
+</blockquote>
+
+<p>저 중에 하나가 키보드 이벤트다. 어떤게 키보드 이벤트인지 알려면 evtest라는 프로그램을 실행하면 된다. 루트 권한으로 실행해야 한다.</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo evtest
+[sudo] password for
+No device specified, trying to scan all of /dev/input/event*
+Available devices:
+/dev/input/event0:	Sleep Button
+/dev/input/event1:	Power Button
+/dev/input/event2:	Power Button
+/dev/input/event3:	Video Bus
+/dev/input/event4:	Gosu Firmware Keyboard
+/dev/input/event5:	Eee PC WMI hotkeys
+/dev/input/event6:	Kensington Slimblade Trackball
+/dev/input/event7:	HDA Intel PCH Front Mic
+/dev/input/event8:	HDA Intel PCH Rear Mic
+/dev/input/event9:	HDA Intel PCH Line
+/dev/input/event10:	HDA Intel PCH Line Out
+/dev/input/event11:	HDA Intel PCH Front Headphone
+/dev/input/event12:	HDA Intel PCH HDMI/DP,pcm=3
+/dev/input/event13:	HDA Intel PCH HDMI/DP,pcm=7
+/dev/input/event14:	HDA Intel PCH HDMI/DP,pcm=8
+Select the device event number [0-14]:
+</code></pre></div>  </div>
+</blockquote>
+
+<p>이 글을 쓰고 있는 현 시점에 내 시스템에서 evtest를 실행했을 때 나온 결과다. event4에 보면 ‘Gosu Firmware Keyboard’라고 있다. 이것은 내가 만든 키보드 펌웨어에서 보낸 디바이스 이름이다. 내가 쓴 다른 게시물을 보면 키보드 펌웨어 만들기가 있다. 나는 내가 직접 만든 키보드와 키보드 펌웨어를 쓰기 때문에 저런 이름이 나온다. 사람마다 다른 event 숫자에 각자 사용하는 키보드의 제품명이 보일 것이다. 키보드 제품명이 보이는 이벤트 번호가 키보드 입력을 알려주는 인풋 이벤트다.</p>
+
+<p>이걸 그냥 파일 읽듯이 읽으면 된다. 어떻게 나오는지 한 번 볼까?</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo cat /dev/input/event4
+s��a?
+(s��a?
+s��a?
+w��a�w��a�%w��a�kw��a�1w��a�1%w��a�1w��a�Gw��a�Gw��a�Gex��a,x��a,x��a,x��a��x��a��2x��a��x��a��1x��a��mnx��a
+xx��a
+x2x��a
+z��a]�z��a]�z��a;�z��a;�.z��a;�^C
+</code></pre></div>  </div>
+</blockquote>
+
+<p>사람이 읽을 수 없는 형태로 출력된다. 그 얘기는 /dev/input/eventX 파일에서 키보드 입력 정보는 바이너리 형태로 출력한다는 것이다. 커널 어딘가에 있는 구조체 정보를 알면 된다.</p>
+
+<p>구조체 정보는 아래와 같다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="k">struct</span> <span class="n">input_event</span> <span class="p">{</span>
+	    <span class="k">struct</span> <span class="n">timeval</span> <span class="n">timestamp</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">type</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">code</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+	<span class="p">};</span></code></pre></figure>
+
+<p>내 시스템에서는 /dev/input/event4를 fopen()으로 열어서 fread()를 할 때 위 구조체 정보대로 읽으면 키보드 입력 정보를 얻을 수 있다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">fd</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"/dev/input/event4"</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">NULL</span> <span class="o">==</span> <span class="n">fd</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"file open error</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">struct</span> <span class="n">input_event</span> <span class="n">ievt</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+    
+    <span class="k">while</span> <span class="p">(</span><span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ievt</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">input_event</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fd</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"type: %d code:%d value:%08x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> 
+                <span class="n">ievt</span><span class="p">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ievt</span><span class="p">.</span><span class="n">code</span><span class="p">,</span> <span class="n">ievt</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">fclose</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span></code></pre></figure>
+
+<p>간단한 코드다. 이 코드를 실행하려면 루트 유저 권한이 필요하다. 왜냐면 /dev/input/event4 파일은 루트 유저만 읽을 수 있기 때문이다. 파일을 열고 앞에서 설명한 키보드 이벤트 구조체 형태로 파일을 읽는다. 읽은 데이터를 화면에 출력한다.</p>
+
+<p>fread()를 while()로 묶었다. 그리고 당연하게도 /dev/input/event4는 끝나지 않는 파일이다. 그래서 사실 맨 마지막 fclose(fd)는 실행되지 않는다. 실행을 끝내려면 kill -9로 SIGKILL 시그널을 주거나 ctrl+c를 눌러서 SIGINT 시그널을 줘야 한다.</p>
+
+<p>빌드하고 실행해 본다.</p>
+
+<blockquote>
+  <p>gcc -o keylogger keylogger_cmd.c</p>
+</blockquote>
+
+<p>위 코드를 keylogger_cmd.c로 저장했다. 실행 파일 이름은 keylogger다. 실행하면,</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type: 1 code:28 value:00000001
+type: 0 code:0 value:00000000
+type: 4 code:4 value:00070028
+type: 1 code:28 value:00000000
+type: 0 code:0 value:00000000
+type: 4 code:4 value:000700e0
+type: 1 code:29 value:00000001
+type: 0 code:0 value:00000000
+type: 4 code:4 value:000700e1
+type: 1 code:42 value:00000001
+type: 0 code:0 value:00000000
+type: 1 code:42 value:00000002
+type: 0 code:0 value:00000001
+type: 1 code:42 value:00000002
+type: 0 code:0 value:00000001
+type: 1 code:42 value:00000002
+type: 0 code:0 value:00000001
+type: 1 code:42 value:00000002
+type: 0 code:0 value:00000001
+type: 4 code:4 value:00070017
+type: 1 code:20 value:00000001
+type: 0 code:0 value:00000000
+type: 4 code:4 value:00070017
+type: 1 code:20 value:00000000
+type: 0 code:0 value:00000000
+type: 4 code:4 value:000700e1
+</code></pre></div>  </div>
+</blockquote>
+
+<p>위와 같은 패턴으로 키보드를 누를 때마다 정보가 출력된다. type은 0, 1, 4가 있다. code는 키보드 스위치를 누를 때마다 나오는 값이 바뀐다. value는 1이거나 2거나 , 0이거나, 아니면 보통 0007로 시작하는 어떤 값이다.</p>
+
+<p>type과 value 값의 의미는 직관적으로 알 수 없다. 그러나 code는 확실히 알겠다. 누르는 키보드 스위치에 할당한 어떤 값이다. 아마도 HID 표준에 정의한 키코드 값일 것이다.</p>
+
+<p>value도 정확한 것은 알 수 없으나 키보드 스위치를 처음 누를 때 1이고, 계속 누르고 있으면 2가 쭉 나온다. 0은 스위치가 올라올 때 즉, 스위치에서 완전히 손가락을 뗐을 때 값이다.</p>
+
+<p>type도 스위치를 누르거나 뗄 때 (value가 1이거나 0일때) 1이거나 0이다. 확실한건 스위치를 최초로 누를 때는 type과 value가 동시에 1이라는 것이다.</p>
+
+<p>나는 스위치를 계속 누르고 있는 것에는 딱히 관심이 없다. 어떤 키를 몇 번 누르는지가 관심사이기 때문에 최초에 키가 눌릴 때에만 횟수를 세면 될것이다.</p>
+
+<p>그 전에 키코드를 보고 어떤 키가 눌린건지 화면에 출력한다. 코드만 봐서는 제대로 횟수를 세고 있는건지 바로 알 수 없기 때문이다. 내가 키코드를 외우고 있는 것이 아니니깐.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="k">struct</span> <span class="n">keymap</span> <span class="p">{</span>
+	    <span class="kt">char</span> <span class="o">*</span><span class="n">keyname</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">keycode</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">howmany</span><span class="p">;</span>
+	<span class="p">};</span>
+	
+	<span class="k">static</span> <span class="k">struct</span> <span class="n">keymap</span> <span class="n">km</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+	    <span class="p">{</span><span class="s">"KEY_RESERVED"</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_ESC"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_1"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_2"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_3"</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_4"</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_5"</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_6"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_7"</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_8"</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_9"</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_0"</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_MINUS"</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_EQUAL"</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_BACKSPACE"</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_TAB"</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_Q"</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_W"</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_E"</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_R"</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_T"</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_Y"</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_U"</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_I"</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_O"</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_P"</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LEFTBRACE"</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RIGHTBRACE"</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_ENTER"</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LEFTCTRL"</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_A"</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_S"</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_D"</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F"</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_G"</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_H"</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_J"</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_K"</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_L"</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SEMICOLON"</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_APOSTROPHE"</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_GRAVE"</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LEFTSHIFT"</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_BACKSLASH"</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_Z"</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_X"</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_C"</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_V"</span><span class="p">,</span><span class="mi">47</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_B"</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_N"</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_M"</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_COMMA"</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_DOT"</span><span class="p">,</span><span class="mi">52</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SLASH"</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RIGHTSHIFT"</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPASTERISK"</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LEFTALT"</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SPACE"</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_CAPSLOCK"</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F1"</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F2"</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F3"</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F4"</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F5"</span><span class="p">,</span><span class="mi">63</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F6"</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F7"</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F8"</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F9"</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F10"</span><span class="p">,</span><span class="mi">68</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_NUMLOCK"</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SCROLLLOCK"</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP7"</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP8"</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP9"</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPMINUS"</span><span class="p">,</span><span class="mi">74</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP4"</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP5"</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP6"</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPPLUS"</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP1"</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP2"</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP3"</span><span class="p">,</span><span class="mi">81</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KP0"</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPDOT"</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_ZENKAKUHANKAKU"</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_102ND"</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F11"</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_F12"</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RO"</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KATAKANA"</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_HIRAGANA"</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_HENKAN"</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KATAKANAHIRAGANA"</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_MUHENKAN"</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPJPCOMMA"</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPENTER"</span><span class="p">,</span><span class="mi">96</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RIGHTCTRL"</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPSLASH"</span><span class="p">,</span><span class="mi">98</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SYSRQ"</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RIGHTALT"</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LINEFEED"</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_HOME"</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_UP"</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_PAGEUP"</span><span class="p">,</span><span class="mi">104</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LEFT"</span><span class="p">,</span><span class="mi">105</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RIGHT"</span><span class="p">,</span><span class="mi">106</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_END"</span><span class="p">,</span><span class="mi">107</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_DOWN"</span><span class="p">,</span><span class="mi">108</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_PAGEDOWN"</span><span class="p">,</span><span class="mi">109</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_INSERT"</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_DELETE"</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_MACRO"</span><span class="p">,</span><span class="mi">112</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_MUTE"</span><span class="p">,</span><span class="mi">113</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_VOLUMEDOWN"</span><span class="p">,</span><span class="mi">114</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_VOLUMEUP"</span><span class="p">,</span><span class="mi">115</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_POWER"</span><span class="p">,</span><span class="mi">116</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPEQUAL"</span><span class="p">,</span><span class="mi">117</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPPLUSMINUS"</span><span class="p">,</span><span class="mi">118</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_PAUSE"</span><span class="p">,</span><span class="mi">119</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SCALE"</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPCOMMA"</span><span class="p">,</span><span class="mi">121</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_HANGEUL"</span><span class="p">,</span><span class="mi">122</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_HANJA"</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_YEN"</span><span class="p">,</span><span class="mi">124</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LEFTMETA"</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RIGHTMETA"</span><span class="p">,</span><span class="mi">126</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_COMPOSE"</span><span class="p">,</span><span class="mi">127</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	<span class="p">};</span>
+	<span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">num_of_keys</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">km</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span></code></pre></figure>
+
+<p>struct keymap에 개별 키가 눌린 횟수를 기록한다. 그러려면 키보드와 키 이름 정보를 알아야 한다. 구글링하면 금방 찾을 수 있다. 리눅스 커널 헤더 어딘가에서 찾아서 구조체 초기값을 만들었다. 예를 들어 키코드가 10진수 35면 h 키를 누른 것이다. 소문자 h다. 혹은 caps lock을 누른 상태에서의 h이거나. 대문자 H는 당연히 shift+h다. 따라서 42번의 left shift 혹은 54번의 right shift와 35번 h를 동시에 누른것이다.</p>
+
+<p>howmany는 개별 키를 몇 번 눌렀는지 세아리는 변수다. 전역 변수 km으로 선언해 놓는다. num_of_keys는 전역변수 km에 엔트리가 몇 개 있는지 계산한다. 보통 코딩하면서 엔트리 개수가 바뀌는 구조체 배열의 개수를 계산할 때 저런 방식을 쓴다. 아니면 그냥 갯수 세기 귀찮거나. 나는 귀찮아서 저렇게 코딩했다.</p>
+
+<p>그럼 코드를 살짝 고쳐본다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="cp">#include &lt;stdio.h&gt;
+</span>    <span class="cp">#include &lt;stdlib.h&gt;
+</span>    <span class="cp">#include &lt;string.h&gt;
+</span>
+    <span class="k">struct</span> <span class="n">keymap</span> <span class="p">{</span>
+        <span class="kt">char</span> <span class="o">*</span><span class="n">keyname</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">keycode</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">howmany</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">static</span> <span class="k">struct</span> <span class="n">keymap</span> <span class="n">km</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">{</span><span class="s">"KEY_RESERVED"</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_ESC"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_1"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_2"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_3"</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_4"</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_5"</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_6"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_7"</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_8"</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_9"</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_0"</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_MINUS"</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_EQUAL"</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_BACKSPACE"</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_TAB"</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_Q"</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_W"</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_E"</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_R"</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_T"</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_Y"</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_U"</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_I"</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_O"</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_P"</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_LEFTBRACE"</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_RIGHTBRACE"</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_ENTER"</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_LEFTCTRL"</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_A"</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_S"</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_D"</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F"</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_G"</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_H"</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_J"</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_K"</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_L"</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_SEMICOLON"</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_APOSTROPHE"</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_GRAVE"</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_LEFTSHIFT"</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_BACKSLASH"</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_Z"</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_X"</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_C"</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_V"</span><span class="p">,</span><span class="mi">47</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_B"</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_N"</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_M"</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_COMMA"</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_DOT"</span><span class="p">,</span><span class="mi">52</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_SLASH"</span><span class="p">,</span><span class="mi">53</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_RIGHTSHIFT"</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPASTERISK"</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_LEFTALT"</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_SPACE"</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_CAPSLOCK"</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F1"</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F2"</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F3"</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F4"</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F5"</span><span class="p">,</span><span class="mi">63</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F6"</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F7"</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F8"</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F9"</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F10"</span><span class="p">,</span><span class="mi">68</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_NUMLOCK"</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_SCROLLLOCK"</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP7"</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP8"</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP9"</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPMINUS"</span><span class="p">,</span><span class="mi">74</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP4"</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP5"</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP6"</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPPLUS"</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP1"</span><span class="p">,</span><span class="mi">79</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP2"</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP3"</span><span class="p">,</span><span class="mi">81</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KP0"</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPDOT"</span><span class="p">,</span><span class="mi">83</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_ZENKAKUHANKAKU"</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_102ND"</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F11"</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_F12"</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_RO"</span><span class="p">,</span><span class="mi">89</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KATAKANA"</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_HIRAGANA"</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_HENKAN"</span><span class="p">,</span><span class="mi">92</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KATAKANAHIRAGANA"</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_MUHENKAN"</span><span class="p">,</span><span class="mi">94</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPJPCOMMA"</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPENTER"</span><span class="p">,</span><span class="mi">96</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_RIGHTCTRL"</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPSLASH"</span><span class="p">,</span><span class="mi">98</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_SYSRQ"</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_RIGHTALT"</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_LINEFEED"</span><span class="p">,</span><span class="mi">101</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_HOME"</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_UP"</span><span class="p">,</span><span class="mi">103</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_PAGEUP"</span><span class="p">,</span><span class="mi">104</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_LEFT"</span><span class="p">,</span><span class="mi">105</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_RIGHT"</span><span class="p">,</span><span class="mi">106</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_END"</span><span class="p">,</span><span class="mi">107</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_DOWN"</span><span class="p">,</span><span class="mi">108</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_PAGEDOWN"</span><span class="p">,</span><span class="mi">109</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_INSERT"</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_DELETE"</span><span class="p">,</span><span class="mi">111</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_MACRO"</span><span class="p">,</span><span class="mi">112</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_MUTE"</span><span class="p">,</span><span class="mi">113</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_VOLUMEDOWN"</span><span class="p">,</span><span class="mi">114</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_VOLUMEUP"</span><span class="p">,</span><span class="mi">115</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_POWER"</span><span class="p">,</span><span class="mi">116</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPEQUAL"</span><span class="p">,</span><span class="mi">117</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPPLUSMINUS"</span><span class="p">,</span><span class="mi">118</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_PAUSE"</span><span class="p">,</span><span class="mi">119</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_SCALE"</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_KPCOMMA"</span><span class="p">,</span><span class="mi">121</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_HANGEUL"</span><span class="p">,</span><span class="mi">122</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_HANJA"</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_YEN"</span><span class="p">,</span><span class="mi">124</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_LEFTMETA"</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_RIGHTMETA"</span><span class="p">,</span><span class="mi">126</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">"KEY_COMPOSE"</span><span class="p">,</span><span class="mi">127</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="p">};</span>
+    <span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">num_of_keys</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">km</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+    <span class="k">struct</span> <span class="n">input_event</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">timeval</span> <span class="n">timestamp</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">type</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">code</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="kt">void</span> <span class="nf">print_usage</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"keylogger N</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"ex: keylogger 4</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s"> if keyboard input device is /dev/input/event4</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="nf">get_key_index</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">keycode</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">keycode</span> <span class="o">==</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">keycode</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="mi">2</span> <span class="o">!=</span> <span class="n">argc</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">print_usage</span><span class="p">();</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">FILE</span> <span class="o">*</span><span class="n">fd</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+        <span class="k">struct</span> <span class="n">input_event</span> <span class="n">ievt</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+        <span class="kt">char</span> <span class="o">*</span><span class="n">input_device_fname</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+        <span class="n">memset</span><span class="p">(</span><span class="n">input_device_fname</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+        <span class="n">memcpy</span><span class="p">(</span><span class="n">input_device_fname</span><span class="p">,</span> <span class="s">"/dev/input/event"</span><span class="p">,</span> <span class="mi">16</span><span class="p">);</span>
+        <span class="n">input_device_fname</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">"input device file name is %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">input_device_fname</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"target key data %ld bytes (%ld * %d)</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">km</span><span class="p">),</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">keymap</span><span class="p">),</span> <span class="n">num_of_keys</span><span class="p">);</span>
+
+        <span class="n">fd</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">input_device_fname</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">NULL</span> <span class="o">==</span> <span class="n">fd</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"file open error</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">free</span><span class="p">(</span><span class="n">input_device_fname</span><span class="p">);</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ievt</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">input_event</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fd</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"type: %d code:%d value:%08x -- "</span><span class="p">,</span> 
+                    <span class="n">ievt</span><span class="p">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ievt</span><span class="p">.</span><span class="n">code</span><span class="p">,</span> <span class="n">ievt</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ievt</span><span class="p">.</span><span class="n">type</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">ievt</span><span class="p">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">key_index</span> <span class="o">=</span> <span class="n">get_key_index</span><span class="p">(</span><span class="n">ievt</span><span class="p">.</span><span class="n">code</span><span class="p">);</span>
+                <span class="n">km</span><span class="p">[</span><span class="n">key_index</span><span class="p">].</span><span class="n">howmany</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">"%s | %d"</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">key_index</span><span class="p">].</span><span class="n">keyname</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">key_index</span><span class="p">].</span><span class="n">howmany</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">fclose</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>앞에 설명했던 코드 조각을 하나로 합쳤다. 그리고 /dev/input/event 파일 번호를 아규먼트로 입력받는다. 그래서 /dev/input/event4가 키보드 이벤트라면 아래처럼 실행하면 된다.</p>
+
+<blockquote>
+  <p>sudo ./keylogger 4</p>
+</blockquote>
+
+<p>뭐가 바뀌었는 보자.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">            <span class="n">printf</span><span class="p">(</span><span class="s">"type: %d code:%d value:%08x -- "</span><span class="p">,</span> 
+                    <span class="n">ievt</span><span class="p">.</span><span class="n">type</span><span class="p">,</span> <span class="n">ievt</span><span class="p">.</span><span class="n">code</span><span class="p">,</span> <span class="n">ievt</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">ievt</span><span class="p">.</span><span class="n">type</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">ievt</span><span class="p">.</span><span class="n">value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">key_index</span> <span class="o">=</span> <span class="n">get_key_index</span><span class="p">(</span><span class="n">ievt</span><span class="p">.</span><span class="n">code</span><span class="p">);</span>
+                <span class="n">km</span><span class="p">[</span><span class="n">key_index</span><span class="p">].</span><span class="n">howmany</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">"%s | %d"</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">key_index</span><span class="p">].</span><span class="n">keyname</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">key_index</span><span class="p">].</span><span class="n">howmany</span><span class="p">);</span>
+            <span class="p">}</span></code></pre></figure>
+
+<p>핵심 변경 지점은 위 코드다. 앞에서 출력 패턴을 파악해보니, type과 value가 동시에 1일 때가 최초로 키를 눌렀을 때다. 그래서 해당 시점을 if문으로 걸러낸다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">    <span class="kt">int</span> <span class="nf">get_key_index</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">keycode</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">keycode</span> <span class="o">==</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">keycode</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>get_key_index() 함수는 그냥 전역변수 km을 리니어 서치하면서 어떤 인덱스에 키코드가 있는지 찾아서 리턴하는 함수다. km이 전역변수이기 때문에 그냥 km의 오프셋 인덱스를 리턴한다. 리턴 받는 쪽에서 오프셋 인덱스를 가지고 km을 쓰면 된다.</p>
+
+<p>그래서 실행해보면</p>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type: 1 code:35 value:00000001 -- KEY_H | 1862
+type: 0 code:0 value:00000000 -- 
+type: 4 code:4 value:0007000b -- 
+type: 1 code:35 value:00000000 -- 
+type: 0 code:0 value:00000000 -- 
+type: 4 code:4 value:00070028 -- 
+type: 1 code:28 value:00000001 -- KEY_ENTER | 396
+type: 0 code:0 value:00000000 -- 
+type: 4 code:4 value:00070028 -- 
+type: 1 code:28 value:00000000 -- 
+type: 0 code:0 value:00000000 -- 
+type: 4 code:4 value:00070028 -- 
+type: 1 code:28 value:00000001 -- KEY_ENTER | 397
+</code></pre></div>  </div>
+</blockquote>
+
+<p>이렇게 나온다. 지금 이 글을 쓰면서 찍어 본것이다. h키는 무려 1862번이고 엔터도 396번이다.</p>
+
+<h2 id="시그널">시그널</h2>
+
+<p>필요한 기능은 다 구현했다. 다만, 내가 글을 끊어 쓰거나 지속적으로 데이터를 쌓아서 기록하고 싶다. 그러려면 각 키가 눌린 횟수를 저장해야 한다. 즉, km[i].howmany를 저장해야 한다. 두 가지 방법이 있다.</p>
+
+<ul>
+  <li>키를 누를 때마다 저장한다.</li>
+  <li>프로그램이 끝날 때 저장하고, 프로그램을 시작할 때 불러온다.</li>
+</ul>
+
+<p>누가 봐도 두 번째 방법으로 만들어야 할 것 같긴하다. 사실 매번 키를 누를 때마다 저장 파일을 열어서 갱신하고 닫는다고 뭐 시스템에 크게 무리가 가진 않는다. 그렇게 구현하는 것이 더 실시간성이 있고 간단하면서 편하다. 다만 그냥 그렇게 만들기 싫을뿐.</p>
+
+<p>그런데 키로거는 끝나지 않는다. 내가 ctrl+c를 눌러야 끝난다. 그러므로 끝나는 시점에 km[i].howmany를 저장하려면 ctrl+c를 누를 때를 처리해야 한다. 시그널 콜백 처리를 해야한다.</p>
+
+<p>내가 시그널 콜백 코딩을 마지막으로 했던게 언제더라… 족히 20년은 지난것 같다. 정말 오랜만에 기본기 코딩을 하니 기분이 좋았다.</p>
+
+<p>너무 오랜만이라 시그널 콜백 연결 하려고 무려 구글 검색을 했다. 이래서 기본기는 평소에 꾸준히 해 놔야 한다. 아무튼 ctrl+c를 처리하는 시그널 콜백은 쉽다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="cp">#include &lt;signal.h&gt;
+</span>	
+	<span class="cp">#define ST_FNAME "statistics.dat"
+</span>	
+	<span class="kt">void</span> <span class="nf">load_statistics_file</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size_statistics</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_of_keys</span><span class="p">;</span>
+		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">datas</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size_statistics</span><span class="p">);</span>
+		
+		<span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">ST_FNAME</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"The statistics data is found %d key infos</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num_of_keys</span><span class="p">);</span>
+			<span class="n">fread</span><span class="p">(</span><span class="n">datas</span><span class="p">,</span> <span class="n">size_statistics</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+			
+			<span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="p">{</span>
+			    <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span> <span class="o">=</span> <span class="n">datas</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+			<span class="p">}</span>
+			
+			<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"There is NO statistics data</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="p">}</span>
+		
+		<span class="n">free</span><span class="p">(</span><span class="n">datas</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="kt">void</span> <span class="nf">store_statistics_data</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+	<span class="p">{</span>	
+		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size_statistics</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_of_keys</span><span class="p">;</span>
+		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">datas</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size_statistics</span><span class="p">);</span>
+		
+		<span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">ST_FNAME</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="p">{</span>
+			    <span class="n">datas</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">;</span>
+			<span class="p">}</span>
+			
+			<span class="n">fwrite</span><span class="p">(</span><span class="n">datas</span><span class="p">,</span> <span class="n">size_statistics</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+			
+			<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"[ERROR] SAVE statistics data fail!!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="p">}</span>
+		
+		<span class="n">free</span><span class="p">(</span><span class="n">datas</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="kt">void</span> <span class="nf">sig_int_handler_for_save_statistics</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"SAVE the statistics data...</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"--------------------------</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">)</span>
+			<span class="p">{</span>
+			    <span class="n">printf</span><span class="p">(</span><span class="s">"%s | %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">keyname</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		
+		<span class="n">store_statistics_data</span><span class="p">();</span>
+		
+		<span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+	<span class="p">{</span>
+		<span class="p">...</span> <span class="err">중략</span> <span class="p">...</span>
+		<span class="n">free</span><span class="p">(</span><span class="n">input_device_fname</span><span class="p">);</span>
+		
+		<span class="n">load_statistics_file</span><span class="p">();</span>
+		
+		<span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">sig_int_handler_for_save_statistics</span><span class="p">);</span>
+		
+		<span class="k">while</span> <span class="p">(</span><span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ievt</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">input_event</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fd</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+		<span class="p">{</span>
+		<span class="p">...</span> <span class="err">후략</span> <span class="p">...</span>
+		<span class="p">}</span>
+		</code></pre></figure>
+
+<p>코드가 너무 길어져서 필요한 코드만 나열했다. ctrl+c 를 입력하면 리눅스 커널은 (쉘이 하던가???) SIGINT를 프로그램에 보낸다. 아무런 시그널 핸들러가 없을 때는 그냥 프로그램을 종료해 버린다. 시그널 핸들러가 있을 때는 시그널 핸들러를 실행한다.</p>
+
+<blockquote>
+  <p>signal(SIGINT, sig_int_handler_for_save_statistics);</p>
+</blockquote>
+
+<p>이 코드가 SIGINT에 대한 시그널 핸들러를 연결하는 코드다. SIGINT에 대해 sig_int_handler_for_save_statistics() 함수를 핸들러로 등록하겠다는 거다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="kt">void</span> <span class="nf">store_statistics_data</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+	<span class="p">{</span>
+	
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size_statistics</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_of_keys</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">datas</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size_statistics</span><span class="p">);</span>
+	
+	    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">ST_FNAME</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">);</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+	    <span class="p">{</span>
+			<span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="p">{</span>
+			    <span class="n">datas</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">;</span>
+			<span class="p">}</span>
+		
+			<span class="n">fwrite</span><span class="p">(</span><span class="n">datas</span><span class="p">,</span> <span class="n">size_statistics</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+		
+			<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+	    <span class="p">}</span>
+	    <span class="k">else</span>
+	    <span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"[ERROR] SAVE statistics data fail!!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	    <span class="p">}</span>
+	
+	    <span class="n">free</span><span class="p">(</span><span class="n">datas</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="kt">void</span> <span class="nf">sig_int_handler_for_save_statistics</span><span class="p">(</span><span class="kt">int</span> <span class="n">sig</span><span class="p">)</span>
+	<span class="p">{</span>
+	    <span class="n">printf</span><span class="p">(</span><span class="s">"SAVE the statistics data...</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	    <span class="n">printf</span><span class="p">(</span><span class="s">"--------------------------</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	    <span class="p">{</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">)</span>
+			<span class="p">{</span>
+			    <span class="n">printf</span><span class="p">(</span><span class="s">"%s | %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">keyname</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">);</span>
+			<span class="p">}</span>
+	    <span class="p">}</span>
+	
+	    <span class="n">store_statistics_data</span><span class="p">();</span>
+	
+	    <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+	<span class="p">}</span></code></pre></figure>
+
+<p>sig_int_handler_for_save_statistics() 함수는 간단하다. 키 눌린 횟수를 기록하고 있는 것 중에 0이 아닌 키들을 그냥 한번 출력하고 store_statistics_data() 함수를 호출한다. 그런다음 exit() 시스템 콜을 호출해서 프로그램을 종료한다.</p>
+
+<p>store_statistics_data() 함수에서는 struct keymap을 모두 파일에 저장하지는 않고, howmany 멤버 변수의 값만 따로 모아서 저장한다. 왜냐면 나머지 struct keymap의 정보는 고정되어 있고 별다른 큰일이 벌어지지 않는한 순서도 변할 일이 없기 때문에 매번 변경되는 값만 저장한다.</p>
+
+<p>사실 요즘에는 스토리지 공간이 남아돌기 때문에 저렇게 안하고 전역 변수 km[] 배열의 데이터를 그대로 파일에 저장해도 된다. 그거 몇 백 KB 더 저장한다고해서 아무런 문제도 생기지 않는다. 그럼에도 내가 옛날에 배운 사람이라 그런지 아니면 직업이 펌웨어 엔지니어라서 그런지 몰라도 불필요한 정보를 스토리지에 저장하는 것이 스스로 거북하다.</p>
+
+<p>프로그램이 시작할 때는 저장해 놨던 기록을 읽어야 한다. 그래서 main() 함수에 load_statistics_file() 함수를 호출하는 코드를 while 루프 시작하기 전에 추가했다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="kt">void</span> <span class="nf">load_statistics_file</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size_statistics</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_of_keys</span><span class="p">;</span>
+		<span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">datas</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size_statistics</span><span class="p">);</span>
+		
+		<span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">ST_FNAME</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">);</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"The statistics data is found %d key infos</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num_of_keys</span><span class="p">);</span>
+			<span class="n">fread</span><span class="p">(</span><span class="n">datas</span><span class="p">,</span> <span class="n">size_statistics</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+			
+			<span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+			<span class="p">{</span>
+			    <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span> <span class="o">=</span> <span class="n">datas</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+			<span class="p">}</span>
+			
+			<span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="k">else</span>
+		<span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"There is NO statistics data</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="p">}</span>
+		
+		<span class="n">free</span><span class="p">(</span><span class="n">datas</span><span class="p">);</span>
+	<span class="p">}</span></code></pre></figure>
+
+<p>load_statistics_file() 함수는 파일에서 howmany 기록을 쭉 읽어서 전역 변수 km[] 배열에 넣어 준다. 시작할 때 동작하므로 결과적으로 전역 변수 km[i].howmany에 직전 실행이 끝났을 때는 숫자를 복원한다.</p>
+
+<h2 id="통계-데이터를-덤프하기">통계 데이터를 덤프하기</h2>
+
+<p>방법은 간단하다. statistics.dat 파일을 읽어서 통계 데이터에 기록된 개수 만큼 알파벳을 찍으면 된다. 그 출력 내용을 키보드 분석하는 사이트에 입력으로 넣어서 결과를 확인한다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="k">struct</span> <span class="n">keymap</span> <span class="p">{</span>
+	    <span class="kt">char</span> <span class="o">*</span><span class="n">keyname</span><span class="p">;</span>
+	    <span class="kt">char</span> <span class="n">key</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">howmany</span><span class="p">;</span>
+	<span class="p">};</span>
+	
+	<span class="k">static</span> <span class="k">struct</span> <span class="n">keymap</span> <span class="n">km</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+	    <span class="p">{</span><span class="s">"KEY_RESERVED"</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_ESC"</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_1"</span><span class="p">,</span> <span class="sc">'1'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_2"</span><span class="p">,</span> <span class="sc">'2'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_3"</span><span class="p">,</span> <span class="sc">'3'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_4"</span><span class="p">,</span> <span class="sc">'4'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_5"</span><span class="p">,</span> <span class="sc">'5'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="o">:</span>
+	    <span class="o">:</span>
+	    <span class="err">중략</span>
+	    <span class="o">:</span>
+	    <span class="o">:</span>
+	    <span class="p">{</span><span class="s">"KEY_B"</span><span class="p">,</span> <span class="sc">'b'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_N"</span><span class="p">,</span> <span class="sc">'n'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_M"</span><span class="p">,</span> <span class="sc">'m'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_COMMA"</span><span class="p">,</span> <span class="sc">','</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_DOT"</span><span class="p">,</span> <span class="sc">'.'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SLASH"</span><span class="p">,</span> <span class="sc">'/'</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_RIGHTSHIFT"</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_KPASTERISK"</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_LEFTALT"</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_SPACE"</span><span class="p">,</span> <span class="sc">' '</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span>
+	    <span class="p">{</span><span class="s">"KEY_CAPSLOCK"</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span></code></pre></figure>
+
+<p>앞서 사용했던 struct keymap 구조를 조금 변형해서 쓴다. 두 번째 멤버 변수가 keycode였는데, 지금은 ekycode가 필요하지 않으므로 keycode 대신 해당 키가 출력되야 할 실제 알파벳을 넣었다. 예를 들어 KEY_B에 해당하는 데이터는 howmany 값 만큼 b를 출력하는 것이다. 직관적으로 이해하기 쉽다.</p>
+
+<p>키코드를 가지고 있지만 출력할 문자를 가지고 있지 않은 키들도 많다. 예를 들어 alt, control, backspace 같은 키들은 키코드는 있지만 출력할 문자를 가지고 있지는 않다. 이런 키에는 그냥 0을 지정해서 0일 때는 출력을 안하게 했다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">num_of_keys</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">km</span><span class="p">)</span> <span class="o">/</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+	
+	<span class="cp">#define ST_FNAME "statistics.dat"
+</span>	
+	<span class="kt">void</span> <span class="nf">load_statistics_file</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+	<span class="p">{</span>
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">size_statistics</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="n">num_of_keys</span><span class="p">;</span>
+	    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="n">datas</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="n">size_statistics</span><span class="p">);</span>
+	    
+	    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">ST_FNAME</span><span class="p">,</span> <span class="s">"rb"</span><span class="p">);</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+	    <span class="p">{</span>
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"The statistics data is found %d key infos</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num_of_keys</span><span class="p">);</span>
+	        <span class="n">fread</span><span class="p">(</span><span class="n">datas</span><span class="p">,</span> <span class="n">size_statistics</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+	
+	        <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	        <span class="p">{</span>
+	            <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span> <span class="o">=</span> <span class="n">datas</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+	        <span class="p">}</span>
+	
+	        <span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+	        
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"Load the statistics data...</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"--------------------------</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	        <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	        <span class="p">{</span>
+	            <span class="k">if</span> <span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">)</span>
+	            <span class="p">{</span>
+	                <span class="n">printf</span><span class="p">(</span><span class="s">"%s | %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">keyname</span><span class="p">,</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">);</span>
+	            <span class="p">}</span>
+	        <span class="p">}</span>
+	    <span class="p">}</span>
+	    <span class="k">else</span>
+	    <span class="p">{</span>
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"There is NO statistics data</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	    <span class="p">}</span>
+	
+	    <span class="n">free</span><span class="p">(</span><span class="n">datas</span><span class="p">);</span>
+	<span class="p">}</span></code></pre></figure>
+
+<p>통계 정보를 읽는 함수다. 앞서 사용한 코드와 완전히 동일하다.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c">	<span class="kt">void</span> <span class="nf">write_statistics_engs</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+	<span class="p">{</span>
+	    <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"st2eng.txt"</span><span class="p">,</span> <span class="s">"wb"</span><span class="p">);</span>
+	    <span class="k">if</span> <span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+	    <span class="p">{</span>
+	        <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num_of_keys</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	        <span class="p">{</span>
+	            <span class="k">if</span> <span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span><span class="p">)</span>
+	            <span class="p">{</span>
+	                <span class="k">if</span> <span class="p">(</span><span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">key</span><span class="p">)</span>
+	                <span class="p">{</span>                
+	                    <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">howmany</span> <span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+	                    <span class="p">{</span>
+	                        <span class="kt">char</span> <span class="n">k</span> <span class="o">=</span> <span class="n">km</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">key</span><span class="p">;</span>
+	                        <span class="n">fwrite</span><span class="p">(</span><span class="o">&amp;</span><span class="n">k</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+	                    <span class="p">}</span>
+	                <span class="p">}</span>
+	            <span class="p">}</span>
+	        <span class="p">}</span>
+	
+	        <span class="c1">// dummy</span>
+	        <span class="kt">char</span> <span class="n">dummy</span> <span class="o">=</span> <span class="sc">'.'</span><span class="p">;</span>
+	        <span class="n">fwrite</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dummy</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>
+	
+	        <span class="n">fclose</span><span class="p">(</span><span class="n">fp</span><span class="p">);</span>
+	    <span class="p">}</span>
+	    <span class="k">else</span>
+	    <span class="p">{</span>
+	        <span class="n">printf</span><span class="p">(</span><span class="s">"[ERROR] result file fail!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	    <span class="p">}</span>
+	<span class="p">}</span></code></pre></figure>
+
+<p>읽은 통계 정보에서 각 key의 howmany 개수만큼 알파벳을 st2eng.txt 파일에 쓰는 코드다. 유의미한 출력만 저장해야 하므로 howmany가 0이 아니고 key가 0이 아닌 것만 howmany 개수만큼 출력한다. 다 출력하고 dummy로 .을 찍은 이유는 키 코드 순서상 유의미한 마지막 키가 space라서 마지막에 공백이 찍힌다. 그런데 이걸 웹 사이트에 긁어서 넣으면 마지막 공백을 무시하기 때문에 dummy로 점을 찍었다. 그래야 분석 사이트에서 스페이스 개수를 센다.</p>
+
+<h2 id="결론">결론</h2>
+
+<p>이 글을 쓰면서 키로거를 돌렸다. 그리고 그 결과를 분석 사이트에 넣어서 아래 그림을 얻었다.</p>
+
+<p><img alt="UTF-8인코딩" src="/assets/images/2022/3741e5ef035fb56b4e69e0601c4d95f6f4e622a776daac6dd6443c3872cfadfb.png" width="80%" /></p>
+
+<p>왼손은 D 키에 타이핑이 많았고, 오른손은 H와 K에 타이핑이 많았다. 전체적으로 결과는 헌법 전문을 변환해서 분석했을 때와 크게 다르지 않았다.</p>
+
+<p>따라서 318Na 세벌식 자판은 두벌식 자판에서 왼손 약지와 R키로 올라가는 격한 왼손 움직임을 없애고, 대신 오른손 검지로 부담을 옮겨서 전체적으로 손의 피로를 줄이는 효과가 있다고 판단할 수 있다.</p>
+
+        
+        <p class="top"><small><a href="#top">[top]</a></small></p>
+        
+    </article>
+</div>
+
+
+
+
+
+    <div class="footer module">
+	<span class="licence">Copyright 2021 Modified by Manwoo Yi</span>
+    <p>
+        Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyllrb</a>.
+        Powered by <a href="https://github.com/drvy/minimal-block" target="_blank">minimal-block theme.</a>
+    </p>
+</div>
+
+
+</body>
+</html>
