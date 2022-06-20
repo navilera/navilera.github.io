@@ -47,6 +47,9 @@
             <a href='https://navilera.com/categories/세벌식'>세벌식</a>
             <br>
         
+            <a href='https://navilera.com/categories/코마'>코마</a>
+            <br>
+        
         </nav>
 
     </header>
@@ -367,7 +370,7 @@
 <p>테스트해 본다.</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat &gt; anal_sample.txt
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat &gt; anal_sample.txt
 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세.
 무궁화 삼천리 화려 강산 대한 사람 대한으로 길이 보전하세
 </code></pre></div>  </div>
@@ -375,7 +378,7 @@
 
 <p>리눅스 터미널에서 이렇게 cat로 해서 한글을 저장하면 시스템 로케일을 따라간다. 보통 시스템 로케일 기본값은 utf-8인 경우가 많다. 그래서 별도 텍스트 에디터등으로 anal_sample.txt를 UCS-2 형식으로 변환해서 저장해야 한다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./c
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./c
 0xb3d9 -&gt; ㄷ + ㅗ + ㅇ: e + h + i
 0xd574 -&gt; ㅎ + ㅐ + : g + o + 
 0xbb3c -&gt; ㅁ + ㅜ + ㄹ: a + n + n
@@ -413,7 +416,7 @@
 <p>“동”은 “ehi”이고 “해”는 “go”다. 그렇게 쭉 애국가 1절을 318Na 자판 기준으로 QWERT 자판으로 치면 어떻게 되는지 자동 변환했다.</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat anal_sample_en.txt 
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat anal_sample_en.txt 
 ehigoannrhkqoyentkhdlakfmrhekIehfhygksmslmdlqhdngktkdnflskfkakhtpanrnighktkmcjhflgh kfurkitkheogkhtkfkmeogkhdmfhrlndlqhwjhgktp
 </code></pre></div>  </div>
 </blockquote>
@@ -447,7 +450,7 @@ ehigoannrhkqoyentkhdlakfmrhekIehfhygksmslmdlqhdngktkdnflskfkakhtpanrnighktkmcjhf
 <p>리눅스 파일 시스템에서 /dev/input 밑에 보면 ‘event숫자’로 이름 붙은 파일들이 보인다.</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls /dev/input -al
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls /dev/input -al
 total 0
 drwxr-xr-x  4 root root     420 Nov 19 22:08 .
 drwxr-xr-x 20 root root    4180 Nov 19 22:09 ..
@@ -476,7 +479,7 @@ crw-rw----  1 root input 13, 32 Nov 19 22:08 mouse0
 <p>저 중에 하나가 키보드 이벤트다. 어떤게 키보드 이벤트인지 알려면 evtest라는 프로그램을 실행하면 된다. 루트 권한으로 실행해야 한다.</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo evtest
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo evtest
 [sudo] password for
 No device specified, trying to scan all of /dev/input/event*
 Available devices:
@@ -504,7 +507,7 @@ Select the device event number [0-14]:
 <p>이걸 그냥 파일 읽듯이 읽으면 된다. 어떻게 나오는지 한 번 볼까?</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo cat /dev/input/event4
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo cat /dev/input/event4
 s��a?
 (s��a?
 s��a?
@@ -558,7 +561,7 @@ z��a]�z��a]�z��a;�z��a;�.z��a;�^C
 <p>위 코드를 keylogger_cmd.c로 저장했다. 실행 파일 이름은 keylogger다. 실행하면,</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type: 1 code:28 value:00000001
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type: 1 code:28 value:00000001
 type: 0 code:0 value:00000000
 type: 4 code:4 value:00070028
 type: 1 code:28 value:00000000
@@ -991,7 +994,7 @@ type: 4 code:4 value:000700e1
 <p>그래서 실행해보면</p>
 
 <blockquote>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type: 1 code:35 value:00000001 -- KEY_H | 1862
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type: 1 code:35 value:00000001 -- KEY_H | 1862
 type: 0 code:0 value:00000000 -- 
 type: 4 code:4 value:0007000b -- 
 type: 1 code:35 value:00000000 -- 
