@@ -18,6 +18,28 @@
       
       <guid>https://navilera.com/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9E%AC%EA%B5%AC%EC%84%B1/</guid>
       <description>&lt;p&gt;Jekyll로 github.io 페이지를 만들어 쓰고 있었으나 Jekyll의 가장 큰 장점이라고 할 수 있는 github에서 자동으로 랜더링해 주는 기능을 쓰지 못하고 정적 페이지를 매번 랜더링해서 블로그를 업데이트했다. 그럴 바에는 굳이 Jekyll을 쓸 이유가 없다. 그래서 마침 심심한 이때에 블로그를 Hugo 기반으로 바꿨다.&lt;/p&gt;
+&lt;h1 id=&#34;맥os에서-설치&#34;&gt;맥OS에서 설치&lt;/h1&gt;
+&lt;p&gt;homebrew를 이용하면 꽤나 쉽다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;간단히 끝난다.&lt;/p&gt;
+&lt;h1 id=&#34;웹-사이트-생성&#34;&gt;웹 사이트 생성&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new site &amp;lt;사이트 이름&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;이러면 hugo에 필요한 기본 파일을 &amp;lt;사이트 이름&amp;gt;에 해당하는 디렉터리에 만든다. 새로 생성된 디렉터리로 이동한다.&lt;/p&gt;
+&lt;h1 id=&#34;글쓰기&#34;&gt;글쓰기&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new post/&amp;lt;파일이름&amp;gt;.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;이렇게 하면 content/post/&amp;lt;파일이름&amp;gt;.md로 파일이 생성된다. 현재 시간과 제목 같은 것이 적힌 헤더가 기본으로 들어가 있다. 이 글의 헤더는 이렇다.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;---
+title: &amp;#34;hugo_start&amp;#34;
+date: 2022-10-19T23:21:42-07:00
+draft: true
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;title은 나중에 한글로 바꿨다. 그리고 draft를 false로 바꿔야 정적페이지로 생성된다.&lt;/p&gt;
+&lt;h1 id=&#34;임시-서버&#34;&gt;임시 서버&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;이렇게 하면 임시 서버가 로컬에 실행된다. 실행해 보면서 글의 레이아웃 등을 조정할 수 있다.&lt;/p&gt;
+&lt;h1 id=&#34;정적-페이지-생성&#34;&gt;정적 페이지 생성&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo -t &amp;lt;테마이름&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;lt;테마이름&amp;gt;에 해당하는 테마로 정적 페이지를 생성한다. public 디렉터리를 생성하고 거기에 정적페이지를 만든다.&lt;/p&gt;
 </description>
     </item>
     
