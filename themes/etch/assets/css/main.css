@@ -247,6 +247,7 @@ main#content blockquote {
 main#content code,
 main#content pre {
     font-family: 'Menlo', monospace;
+    background: #E1DED8;
 }
 
 main#content code {
