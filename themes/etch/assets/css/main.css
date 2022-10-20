@@ -250,6 +250,8 @@ main#content pre {
     background: #E1DED8;
 }
 
+main#content div.highlight { background: #706E6B }
+
 main#content code {
     font-size: 0.96em;
     padding: 0 5px;
