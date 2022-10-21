@@ -20,6 +20,7 @@ body {
 
 header#banner {
     margin: 25px 0;
+    border-bottom: 1px solid;
 }
 
 header#banner a {
@@ -142,8 +143,7 @@ main#content ul#posts li a:hover small {
 /* single.html styles */
 main#content header#post-header h1 {
     display: block;
-    font-size: 23px;
-    font-size: 2.3rem;
+    font-size: 3.0rem;
     font-weight: 600;
     line-height: 1.15;
 }
@@ -236,12 +236,11 @@ main#content figure figcaption p {
 }
 
 main#content blockquote {
-    font-style: italic;
+    background: #D1EBF0;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 10px;
     padding-left: 15px;
-    border-left: 3px solid #ccc;
 }
 
 main#content code,
