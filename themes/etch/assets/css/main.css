@@ -79,6 +79,11 @@ main#content h6 {
     line-height: 1.15;
 }
 
+main#content h1 {
+    margin-bottom: 1.5rem;
+    font-size:3rem;
+}
+
 main#content h3 {
     font-size: 19px;
     font-size: 1.9rem;
