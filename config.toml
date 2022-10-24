@@ -9,7 +9,7 @@ pygmentsUseClasses = true
 [params]
   description = "This is Navilera's Blog"
   copyright = "Copyright © 2022 Navilera"
-  dark = "auto"
+  dark = "false"
   highlight = true
 
 [menu]
