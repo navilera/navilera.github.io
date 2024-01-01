@@ -1,0 +1,16 @@
+오랜만에 블로그 포스팅하면 헤깔린다.
+
+1. main 브랜치로 checkout 할 필요 없다.
+
+/Users/manwoo/Projects/navilera.github.io -> source 브랜치
+/Users/manwoo/Projects/navilera.github.io/public -> main 브랜치
+
+2. contents/posts 디렉토리에 md 파일을 만든다.
+
+3. make run 해서 미리보기
+
+4. pull add commit push 한다.
+
+5. make 하면 public에 아웃풋 만든다.
+
+6. public으로 이동해서 pull, add , commit , push 한다.
